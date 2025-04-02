@@ -1,0 +1,1009 @@
+html {
+    font-size: 62.5%;
+}
+
+$offwhite:#F1EFEA;
+$white: #fdfdfd;
+$black: #333631;
+$gray: #767676;
+$gold: #C5B589;
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: $black;
+    background-color: $offwhite;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h2,h3 {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.section {
+    border: red solid 1px;
+    overflow: hidden;
+    max-width: 109.2rem;
+    margin: 15rem auto;
+}
+
+@mixin accentFont($weight: "bold") {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+}
+
+%left-flex-style {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+%center-flex-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight {
+    color: $gold;
+}
+
+//ヘッダー
+
+.header {
+    border: red solid 1px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 2;
+
+    &__logoImg {
+        margin: 2.1rem auto 2.1rem 3rem;
+    }
+
+    &__menuImg {
+        margin: 1.6rem 3rem 1.6rem auto;
+    }
+}
+
+// ハンバーガーメニュー
+
+body.on {
+    height: 100%;
+    overflow: hidden;
+}
+
+.jsNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    padding-top: 1.6rem;
+    padding-bottom: 6.4rem;
+    background: $offwhite;
+    display: flex;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+
+    &__closeBtn {
+        border: red solid 1px;
+        margin-right: 3.8rem;
+        margin-left: auto;
+        width: 3rem;
+    }
+
+    &__menu {
+        border: red solid 1px;
+        margin-top: 11.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list {
+        border: red solid 1px;
+        @include accentFont;
+        text-decoration: none;
+        color: $black;
+        margin-bottom: 4rem;
+    }
+
+    &__logo {
+        border: red solid 1px;
+        width: 10rem;
+        margin: 7rem auto;
+    }
+}
+
+
+// FV
+
+.fv {
+    border: red solid 1px;
+    display: flex;
+    justify-content: flex-end;
+
+    &__img {
+        max-width: 116rem;
+        height: 68rem;
+        margin-top: 4vw;
+        margin-right: 7vw;
+        margin-left: 20vw;
+    }
+}
+
+@keyframes scissorsMoveLeft {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-12deg);
+    }
+    30% {
+        transform: rotate(-5deg);
+    }
+    40% {
+        transform: rotate(-12deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes scissorsMoveRight {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(12deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(12deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+}
+.fvScrollIcon {
+    border: red solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 2.9rem;
+    margin: 0 auto;
+    position: relative;
+
+    .fvScrollIcon__scissorsWrapper {
+        position: relative;
+        width: 2.9rem;
+        height: 2.9rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        @include accentFont;
+        margin-top: 8rem;
+    }
+
+    &__scissors1,
+    &__scissors2 {
+        width: 2.9rem;
+        position: absolute; // 重ねる
+        top: 0; // 同じ位置に配置
+        left: 0;
+        margin-top: 5rem;
+    }
+
+    &__scissors1 {
+        animation: scissorsMoveLeft 2s ease-in-out infinite;
+    }
+
+    &__scissors2 {
+        animation: scissorsMoveRight 2s ease-in-out infinite;
+    }
+}
+
+.fvScrollIcon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8.5rem;
+    height: 0.1rem;
+    border-top: solid 0.1rem $gray;
+    transform: rotate(90deg);
+}
+
+// CONCEPT
+
+.concept {
+    border: blue solid 1px;
+    @extend %left-flex-style;
+    flex-direction: column;
+    position: relative;
+
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.conceptTxts {
+    border: green solid 1px;
+    position: relative;
+    z-index: 1;
+
+    &__ttl {
+        font-size: 4rem;
+        @include accentFont;
+        padding:0 .1em .2em;
+        margin-bottom: 3rem;
+        border-bottom: 0.1rem solid $gray;
+        background-color: $offwhite;
+        max-width: 20rem;
+        text-align: left;
+    }
+
+
+    &__message {
+        font-size: 2rem;
+        margin-left: 6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__details {
+        margin-left: 6rem;
+        margin-bottom: 10rem;
+    }
+
+}
+
+.conceptSupport {
+    position: relative;
+    background-color: $white;
+    text-align: center;
+    padding: 6rem 7rem;
+    margin: 3vw auto;
+    max-width: 70rem;
+    z-index: 2;
+}
+
+.conceptTxts::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $black;
+    width: 50%;
+    height: 40rem;
+    top: 20vw;
+    left: 2vw;
+    z-index: -2;
+}
+
+// PROFILE
+
+.profile {
+    @extend %center-flex-style;
+
+    &__ttl {
+        font-size: 4rem;
+        @include accentFont;
+        padding:0 .1em .2em;
+        margin: 0 auto 3rem;
+        border-bottom: 0.1rem solid $gray;
+        background-color: $offwhite;
+        width: 20rem;
+        text-align: center;
+    }
+}
+
+.profileContents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 44rem;
+}
+
+.profileImg {
+    border: blue solid 1px;
+}
+
+.profileTxts {
+    border: green solid 1px;
+    width: 62%;
+    background-color: $black;
+    color: $offwhite;
+    padding-top: 10rem;
+    padding-left: 6rem;
+
+    &__name {
+        font-size: 2.4rem;
+    }
+
+    &__career {
+        margin-left: 12.7rem;
+    }
+
+    &__details {
+        margin-left: 12.7rem;
+        margin-top: 4rem;
+        line-height: 4rem;
+    }
+}
+
+// MENU
+
+.menu {
+    border: blue solid 1px;
+    @extend %left-flex-style;
+    flex-direction: column;
+    position: relative;
+    height: 100rem;
+
+    &__ttl {
+        font-size: 4rem;
+        @include accentFont;
+        padding:0 .1em .2em;
+        margin-bottom: 3rem;
+        border-bottom: 0.1rem solid $gray;
+        background-color: $offwhite;
+        max-width: 20rem;
+        text-align: left;
+    }
+
+}
+
+.menuImg {
+    position: relative;
+    margin-left: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    z-index: 0;
+
+    img {
+        display: block;
+    }
+}
+
+.menuImg::after {
+    content: "";
+    position: absolute;
+    background-color: $black;
+    width: 70%;
+    height: 46rem;
+    top: 18vw;
+    left: -10vw;
+    z-index: -1;
+}
+
+.menu__img::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $black;
+    width: 50%;
+}
+
+.menuTxts {
+    position: absolute;
+    background-color: $offwhite;
+    opacity: 75%;
+    padding: 10rem 6rem;
+    z-index: 1;
+    top: 4vw;
+    right: 0;
+
+    &__details {
+        font-size: 2rem;
+    }
+}
+
+// ボタン
+
+.btnArea {
+    display: flex;
+    justify-content: flex-end;
+
+    a{
+        text-decoration: none;
+        color: $black;
+        font-size: 2rem;
+        @include accentFont;
+        position: relative;
+        border: solid 0.1rem $black;
+        background-color: $white;
+        text-align: center;
+        padding: 2.6rem 9rem;
+        max-width: 30rem;
+        align-items: center;
+    }
+
+    a::before {
+        content: "";
+        width: 7rem;
+        border-top: solid 0.1rem $black;
+        position: absolute;
+        left: -3.5rem;
+        top: 50%;
+    }
+
+    a:hover {
+        color: $white;
+        background-color: $black;
+        transition: all .5s ease;
+    }
+
+    a:hover::before {
+        left: -4.5rem;
+        transition: all .5s ease;
+    }
+}
+
+// NEWS
+
+
+// FEATURES
+
+.features {
+    border: blue solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    &__ttl {
+        font-size: 4rem;
+        @include accentFont;
+        padding:0 .1em .2em;
+        margin: 0 auto 3rem;
+        border-bottom: 0.1rem solid $gray;
+        background-color: $offwhite;
+        width: 20rem;
+        text-align: center;
+    }
+
+}
+
+.featuresContents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+
+        img {
+            display: block;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &::before {
+            content: "Check!";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include accentFont;
+            color: $black;
+            font-size: 4rem;
+            background: rgba(241, 239, 234, 0.9);
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            transform: translate(-50%, -50%); //
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}
+
+
+// RESERVATION
+
+.reservation {
+    border: blue solid 1px;
+    @extend %left-flex-style;
+
+    a {
+        text-decoration: none;
+        @include accentFont;
+        color: $black;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        text-align: center;
+        align-items: center;
+        border: solid 0.1rem $black;
+        padding: 10rem;
+        width: 35rem;
+        height: 30rem;
+    }
+
+    &__logo {
+        width: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    &__hpb {
+        width: 16.5rem;
+        margin-bottom: 3rem;
+
+    }
+}
+
+// ACCESS
+
+.access {
+    border: blue solid 1px;
+    @extend %left-flex-style;
+    margin-bottom: 15rem;
+}
+
+.accessTxts {
+    background-color: $black;
+    color: $offwhite;
+    padding-left: 21rem;
+    padding-right: 12.5rem;
+    padding-top: 5rem;
+    width: 50%;
+
+    &__ttl {
+        @include accentFont;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__address {
+        margin-bottom: 2rem;
+    }
+}
+
+.accessMap {
+    width: 50%;
+
+    iframe {
+        width: 100%;
+    }
+}
+
+// フッター
+
+.footer {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+
+    a{
+        @include accentFont;
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.footerMenu{
+
+    &__label{
+        position: relative;
+
+        &::before {
+        content: attr(data);
+        display: block;
+    }
+
+        &::after {
+        content:"";
+        display: block;
+        position: absolute;
+        top: 120%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        justify-content: center;
+        height: 0.1rem;
+        background-color: $black;
+        transition: width 300ms;
+        width: 0;
+    }
+
+        &:hover {
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+li {
+    margin-left: 4rem;
+}}
+
+.copyright {
+    @include accentFont;
+    font-size: 1.2rem;
+    margin-bottom: 7rem;
+
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 0.1rem;
+    background-color: $gray;
+}
+
+// 髪質改善ページ
+
+//FV
+
+.improvementFv {
+    background-image: url("/img/improvementFv.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__hist {
+        background-color: rgb(241, 239, 234, 90%);
+        text-align: center;
+        padding: 5rem;
+    }
+
+    &__ttl {
+        font-size: 4rem;
+        @include accentFont;
+        padding:0 .1em .2em;
+        margin: 0 auto 3rem;
+        border-bottom: 0.1rem solid $gray;
+        width: 20rem;
+        text-align: center;
+    }
+
+    &__details {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+}
+
+//髪質改善について
+
+.ttlUnderBar {
+    width: 20rem;
+    height: 0.1rem;
+    border-bottom: 0.1rem solid $gray;
+    margin: 0 auto;
+}
+
+.improvement {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__details {
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+}
+
+
+.improvementContents {
+    display: flex;
+    align-items: center;
+
+    &__details {
+        margin-left: 5rem;
+        font-weight: 400;
+    }
+}
+
+// 質感再生カラー
+
+.improvementColor {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.improvementColorImg {
+    display: flex;
+    flex-direction: column;
+
+    &__01 {
+        margin-top: 5rem;
+        margin-right: auto;
+    }
+
+    &__02 {
+        margin-top: 2rem;
+        margin-left: auto;
+    }
+}
+
+.improvementColorTxts {
+    text-align: center;
+    background-color: $white;
+    padding: 6.4rem;
+    width: 60%;
+    margin: 8rem auto 0;
+}
+
+// Ravissaについて
+
+.ravissa {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__img {
+        max-width: 100rem;
+        margin: 5rem auto;
+    }
+
+    &__details {
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 5rem;
+    }
+}
+
+// ヒト幹細胞培養液ページ
+
+//fv
+
+.humanstemcellsFv {
+    background-image: url("/img/humanstemcellsFv.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__hist {
+        background-color: rgb(241, 239, 234, 90%);
+        text-align: center;
+        padding: 5rem;
+    }
+
+    &__ttl {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__details {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+//ヒト幹細胞培養液 頭皮の育毛促進プログラム
+
+.humanstemcells {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__about {
+        font-size: 2rem;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 2.8rem;
+            height: 2rem;
+            background-image: url(../img/ruu_cat.svg);
+            background-size: contain;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            margin-right: 1rem;
+        }
+    }
+
+    &__details {
+        text-align: left;
+        margin-top: 1rem;
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.humanstemcellsImg {
+    max-width: 103.8rem;
+    margin: 4rem auto;
+}
+
+// 強髪メニュー
+
+.kyoukamiMenu {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__details {
+        text-align: center;
+        font-weight: 400;
+        margin-top: 1rem;
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.kyoukamiMenuImg {
+    max-width: 96.6rem;
+    margin: 0 auto;
+}
+
+//強髪施術方法
+
+.kyoukamiFlow {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__details {
+        text-align: center;
+        font-weight: 400;
+        margin-top: 1rem;
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.kyoukamiFlowImg {
+    max-width: 107.3rem;
+    margin: 0 auto;
+}
+
+// 強髪Q&A
+
+.kyoukamiQanda {
+    @extend %center-flex-style;
+
+    &__ttl {
+        position: relative;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__details {
+        text-align: center;
+        font-weight: 400;
+        margin-top: 1rem;
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.kyoukamiQandaList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    dl {
+        background-color: $white;
+        border: solid 0.1rem $black;
+        padding: 3rem;
+        margin-top: 1rem;
+
+    }
+
+    dt {
+        margin-bottom: 2rem;
+
+        &::before {
+            content: "Q";
+            margin-right: 1rem;
+            @include accentFont;
+            font-size: 3rem;
+        }
+    }
+
+    dd {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        &::before {
+            content: "A";
+            margin-right: 1rem;
+            @include accentFont;
+            font-size: 3rem;
+        }
+        }
+
+    &__qa {
+        @include accentFont;
+        font-size: 3rem;
+    }
+
+}
+
+.qandLine {
+    max-width: 103.2rem;
+    height: 0.1rem;
+    border-bottom: 0.1rem solid $gray;
+    margin: 0 auto;
+}
