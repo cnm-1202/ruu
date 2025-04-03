@@ -42,3 +42,56 @@ function smoothScroll(start, end, duration) {
 
     requestAnimationFrame(scrollStep);
 }
+
+//フェードアニメーション
+
+const fadeElements = document.querySelectorAll('.fadeUp, .fadeLeft, .fadeRight');
+
+const checkVisibility = () => {
+fadeElements.forEach(element => {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom > 0) {
+    element.classList.add('visible');
+    } else {
+      element.classList.remove('visible'); //
+    }
+});
+};
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);
+
+//メニュー開閉
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const nav = document.getElementById("jsNav");
+    const overlay = document.getElementById("overlay");
+    const body = document.body;
+    const navItems = document.querySelectorAll(".jsNav__list");
+
+    // メニューを開く
+    menuBtn.addEventListener("click", function () {
+        nav.classList.add("active");
+        overlay.classList.add("active");
+        body.style.overflow = "hidden";
+    });
+
+    // メニューを閉じる
+    function closeMenu() {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+        body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+
+    navItems.forEach(item => {
+        item.addEventListener("click", closeMenu);
+    });
+});
+
