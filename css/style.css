@@ -146,9 +146,10 @@ h2, h3 {
 }
 .header__menuImg {
   margin: 1.6rem 3rem 1.6rem auto;
+  cursor: pointer;
 }
 
-body.on {
+body.isActive {
   height: 100%;
   overflow: hidden;
 }
@@ -164,16 +165,15 @@ body.on {
   padding-top: 1.6rem;
   padding-bottom: 6.4rem;
   background: #F1EFEA;
-  display: flex;
   transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.7s ease-in-out;
   z-index: 999;
 }
 .jsNav__closeBtn {
   border: red solid 1px;
   margin-right: 3.8rem;
   margin-left: auto;
-  width: 3rem;
+  cursor: pointer;
 }
 .jsNav__menu {
   border: red solid 1px;
@@ -191,11 +191,57 @@ body.on {
   text-decoration: none;
   color: #333631;
   margin-bottom: 4rem;
+  position: relative;
+}
+.jsNav__list::before {
+  content: attr(data);
+  display: block;
+}
+.jsNav__list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 120%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  justify-content: center;
+  height: 0.1rem;
+  background-color: #333631;
+  transition: width 300ms;
+  width: 0;
+}
+.jsNav__list:hover::after {
+  width: 100%;
 }
 .jsNav__logo {
   border: red solid 1px;
   width: 10rem;
   margin: 7rem auto;
+}
+
+.jsNav.active {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 10;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .fv {
@@ -300,13 +346,12 @@ body.on {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .conceptTxts {
   border: green solid 1px;
   position: relative;
-  z-index: 1;
 }
 .conceptTxts__ttl {
   font-size: 4rem;
@@ -338,7 +383,7 @@ body.on {
   padding: 6rem 7rem;
   margin: 3vw auto;
   max-width: 70rem;
-  z-index: 2;
+  z-index: 1;
 }
 
 .conceptTxts::after {
@@ -350,7 +395,7 @@ body.on {
   height: 40rem;
   top: 20vw;
   left: 2vw;
-  z-index: -2;
+  z-index: 0;
 }
 
 .profile__ttl {
@@ -744,17 +789,22 @@ body.on {
 }
 .improvement__details {
   text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
 .improvementContents {
+  border: 1px red solid;
   display: flex;
   align-items: center;
+  height: fit-content;
 }
 .improvementContents__details {
-  margin-left: 5rem;
+  padding: 7.4rem;
   font-weight: 400;
+  background-color: #333631;
+  color: #F1EFEA;
+  width: 60%;
 }
 
 .improvementColor__ttl {
@@ -797,7 +847,8 @@ body.on {
 }
 .ravissa__details {
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 4rem;
   margin-bottom: 5rem;
 }
 
@@ -919,7 +970,7 @@ body.on {
   background-color: #fdfdfd;
   border: solid 0.1rem #333631;
   padding: 3rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .kyoukamiQandaList dt {
   margin-bottom: 2rem;
@@ -959,4 +1010,38 @@ body.on {
   height: 0.1rem;
   border-bottom: 0.1rem solid #767676;
   margin: 0 auto;
+}
+
+.fadeUp,
+.fadeLeft,
+.fadeRight {
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+.fadeUp {
+  transform: translateY(30px);
+}
+
+.fadeUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeLeft {
+  transform: translateX(-30px);
+}
+
+.fadeLeft.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fadeRight {
+  transform: translateX(30px);
+}
+
+.fadeRight.visible {
+  opacity: 1;
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */

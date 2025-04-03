@@ -30,11 +30,12 @@
     <!-- ヘッダーここから -->
     <header>
         <div class="header">
-            <img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"><img src="./img/menu.svg" alt="メニュー" class="header__menuImg">
+            <img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
 
         <!-- メニュー -->
-        <nav id="jsNav" class="jsNav active">
-            <img src="./img/closeBtn.svg" id="jsNav__closeBtn" class="jsNav__closeBtn">
+        <div id="overlay" class="overlay"></div>
+        <nav id="jsNav" class="jsNav">
+            <img src="./img/closeBtn.svg" id="closeBtn" class="jsNav__closeBtn">
             <ul class="jsNav__menu">
                 <a href="#top" class="jsNav__list"><li><p>TOP</p></li></a>
                 <a href="#concept" class="jsNav__list"><li><p>CONCEPT</p></li></a>
@@ -57,7 +58,7 @@
     <!-- FV -->
         <div class="humanstemcellsFv">
 
-            <div class="humanstemcellsFv__hist">
+            <div class="humanstemcellsFv__hist fadeUp">
                 <h2 class="humanstemcellsFv__ttl">ヒト幹細胞培養液<br>
                     頭皮の育毛促進プログラム</h2>
                 <div class="ttlUnderBar"></div>
@@ -94,7 +95,7 @@
         </div>
 
         <div class="humanstemcellsImg">
-            <img src="./img/whatIsKyoukami.webp" alt="Ruu 強髪とは？">
+            <img src="./img/whatIsKyoukami.webp" alt="Ruu 強髪とは？" class="fadeUp">
         </div>
 
     </div>
@@ -111,7 +112,7 @@
         </div>
 
         <div class="kyoukamiMenuImg">
-            <img src="./img/kyoukamiMenu.webp" alt="Ruu 強髪メニュー">
+            <img src="./img/kyoukamiMenu.webp" alt="Ruu 強髪メニュー" class="fadeRight">
         </div>
     </div>
     <!-- 強髪メニュー ここまで -->
@@ -122,7 +123,7 @@
         <div class="ttlUnderBar"></div>
 
         <div class="kyoukamiFlowImg">
-            <img src="./img/kyoukamiFlow.webp" alt="Ruu 強髪施術方法">
+            <img src="./img/kyoukamiFlow.webp" alt="Ruu 強髪施術方法" class="fadeLeft">
         </div>
     </div>
     <!-- 強髪施術方法 ここまで -->
@@ -136,28 +137,28 @@
         </div>
 
         <div class="kyoukamiQandaList">
-                <dl>
+                <dl class="fadeUp">
                     <dt>産後の抜け毛にも効果的ですか？</dt>
                     <div class="qandLine"></div>
                     <dd>大変おすすめです。髪質の変化から時間が経ってしまうと、<br>
                         改善にも影響が出てしまうので、産後10ヶ月以内がおすすめです。</dd>
                 </dl>
 
-                <dl>
+                <dl class="fadeUp">
                     <dt>元々髪の毛が細いのですが、太くなりますか？</dt>
                     <div class="qandLine"></div>
                     <dd>生まれつき細い髪の毛を太くするのは難しいですが、年齢を重ねて細くなることは誰しもが<br>
                     感じる事です。以前より髪が細くなったと感じたらぜひ強髪を！</dd>
                 </dl>
 
-                <dl>
+                <dl class="fadeUp">
                     <dt>半年間のプログラム修了後はどうすればよいでしょうか？</dt>
                     <div class="qandLine"></div>
                     <dd>筋トレと同じで、一度体を作ってもやめてしまうと体は元に戻ります。<br>
                     頻度を下げた定期ケアに切り替えることをおすすめします。</dd>
                 </dl>
 
-                <dl>
+                <dl class="fadeUp">
                     <dt>月に1回のサロン施術でも効果はありますか？</dt>
                     <div class="qandLine"></div>
                     <dd>あります。<br>
@@ -170,7 +171,7 @@
 
     <!-- RESERVATION -->
     <div class="section">
-        <div id="reservation" class="reservation">
+        <div id="reservation" class="reservation fadeUp">
 
             <a href="https://lin.ee/wPSXxHY "><div class="reservation__btn"><img src="./img/line.svg" class="reservation__logo"><p class="reservation__label">Official LINE</p></div></a>
 

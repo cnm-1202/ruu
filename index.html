@@ -30,11 +30,12 @@
     <!-- ヘッダーここから -->
     <header>
         <div class="header">
-            <img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"><img src="./img/menu.svg" alt="メニュー" class="header__menuImg">
+            <img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
 
         <!-- メニュー -->
-        <nav id="jsNav" class="jsNav active">
-            <img src="./img/closeBtn.svg" id="jsNav__closeBtn" class="jsNav__closeBtn">
+        <div id="overlay" class="overlay"></div>
+        <nav id="jsNav" class="jsNav">
+            <img src="./img/closeBtn.svg" id="closeBtn" class="jsNav__closeBtn">
             <ul class="jsNav__menu">
                 <a href="#top" class="jsNav__list"><li><p>TOP</p></li></a>
                 <a href="#concept" class="jsNav__list"><li><p>CONCEPT</p></li></a>
@@ -55,7 +56,7 @@
 
     <main>
     <!-- FV -->
-        <div id="top" class="fv"><img src="./img/FV_3.webp" alt="Ruuトップページ画像" class="fv__img"></div>
+        <div id="top" class="fv"><img src="./img/FV_3.webp" alt="Ruuトップページ画像" class="fv__img fadeUp"></div>
 
         <figure class="fvScrollIcon">
             <div class="fvScrollIcon__scissorsWrapper">
@@ -79,7 +80,7 @@
                     「いつまでも美しくありたい」を叶えます。</p>
             </div>
 
-            <div class="conceptSupport">
+            <div class="conceptSupport fadeLeft">
                 <p class="conceptSupport__details">Ruu（ルウ）は、お客様の髪の悩みに寄り添う<br>
                 完全貸切マンツーマン美容室です。<br>
                 <br>
@@ -89,7 +90,7 @@
                 あなたの「<span class="highlight">いつまでも美しくありたい</span>」をサポートします。</p>
             </div>
 
-            <img src="./img/concept_pic.webp" alt="Ruu コンセプト画像" class="conceptUpperArea__img">
+            <img src="./img/concept_pic.webp" alt="Ruu コンセプト画像" class="conceptImg fadeUp">
 
         </div>
     </div>
@@ -100,7 +101,7 @@
         <div id="profile" class="profile">
             <h3 class="profile__ttl">Profile</h3>
 
-            <div class="profileContents">
+            <div class="profileContents fadeRight">
                 <div class="profileImg">
                 <img src="./img/profile_pic.webp" alt="Ruu プロフィール画像">
                 </div>
@@ -132,7 +133,7 @@
                 何でもご相談ください。</p>
             </div>
 
-            <div class="menuImg">
+            <div class="menuImg fadeUp">
             <img src="./img/menu_pic.webp" alt="Ruu メニュー画像">
             </div>
 
@@ -148,7 +149,7 @@
         <div id="features" class="features">
             <h3 class="features__ttl">Features</h3>
 
-            <div class="featuresContents">
+            <div class="featuresContents fadeUp">
 
                 <a href="improvement.html"><img src="./img/improvement.webp" alt="髪質改善について"></a>
 
@@ -164,7 +165,7 @@
 
     <!-- RESERVATION -->
     <div class="section">
-        <div id="reservation" class="reservation">
+        <div id="reservation" class="reservation fadeUp">
 
             <a href="https://lin.ee/wPSXxHY "><div class="reservation__btn"><img src="./img/line.svg" class="reservation__logo"><p class="reservation__label">Official LINE</p></div></a>
 

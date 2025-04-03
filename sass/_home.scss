@@ -77,12 +77,13 @@ h2,h3 {
 
     &__menuImg {
         margin: 1.6rem 3rem 1.6rem auto;
+        cursor: pointer;
     }
 }
 
 // ハンバーガーメニュー
 
-body.on {
+body.isActive {
     height: 100%;
     overflow: hidden;
 }
@@ -98,16 +99,15 @@ body.on {
     padding-top: 1.6rem;
     padding-bottom: 6.4rem;
     background: $offwhite;
-    display: flex;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s ease-in-out;
     z-index: 999;
 
     &__closeBtn {
         border: red solid 1px;
         margin-right: 3.8rem;
         margin-left: auto;
-        width: 3rem;
+        cursor: pointer;
     }
 
     &__menu {
@@ -124,6 +124,35 @@ body.on {
         text-decoration: none;
         color: $black;
         margin-bottom: 4rem;
+
+        position: relative;
+
+        &::before {
+        content: attr(data);
+        display: block;
+    }
+
+        &::after {
+        content:"";
+        display: block;
+        position: absolute;
+        top: 120%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        justify-content: center;
+        height: 0.1rem;
+        background-color: $black;
+        transition: width 300ms;
+        width: 0;
+    }
+
+        &:hover {
+            &::after{
+                width: 100%;
+            }
+        }
     }
 
     &__logo {
@@ -133,6 +162,28 @@ body.on {
     }
 }
 
+.jsNav.active {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 10;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
 
 // FV
 
@@ -246,14 +297,13 @@ body.on {
         position: absolute;
         right: 0;
         top: 0;
-        z-index: 1;
+        z-index: 0;
     }
 }
 
 .conceptTxts {
     border: green solid 1px;
     position: relative;
-    z-index: 1;
 
     &__ttl {
         font-size: 4rem;
@@ -265,7 +315,6 @@ body.on {
         max-width: 20rem;
         text-align: left;
     }
-
 
     &__message {
         font-size: 2rem;
@@ -287,7 +336,7 @@ body.on {
     padding: 6rem 7rem;
     margin: 3vw auto;
     max-width: 70rem;
-    z-index: 2;
+    z-index: 1;
 }
 
 .conceptTxts::after {
@@ -299,7 +348,7 @@ body.on {
     height: 40rem;
     top: 20vw;
     left: 2vw;
-    z-index: -2;
+    z-index: 0;
 }
 
 // PROFILE
@@ -736,19 +785,23 @@ li {
 
     &__details {
         text-align: center;
-        margin-top: 5rem;
-        margin-bottom: 10rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
     }
 }
 
-
 .improvementContents {
+    border: 1px red solid;
     display: flex;
     align-items: center;
+    height: fit-content;
 
     &__details {
-        margin-left: 5rem;
+        padding:7.4rem;
         font-weight: 400;
+        background-color: $black;
+        color: $offwhite;
+        width: 60%;
     }
 }
 
@@ -807,7 +860,8 @@ li {
 
     &__details {
         text-align: center;
-        font-weight: 400;
+        font-weight: 500;
+        line-height: 4rem;
         margin-bottom: 5rem;
     }
 }
@@ -967,7 +1021,7 @@ li {
         background-color: $white;
         border: solid 0.1rem $black;
         padding: 3rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
 
     }
 
@@ -1006,4 +1060,37 @@ li {
     height: 0.1rem;
     border-bottom: 0.1rem solid $gray;
     margin: 0 auto;
+}
+
+//アニメーション
+
+.fadeUp,
+.fadeLeft,
+.fadeRight {
+opacity: 0;
+transition: opacity .9s ease-in-out, transform .9s ease-in-out;
+}
+
+.fadeUp {
+transform: translateY(30px);
+}
+.fadeUp.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.fadeLeft {
+transform: translateX(-30px);
+}
+.fadeLeft.visible {
+opacity: 1;
+transform: translateX(0);
+}
+
+.fadeRight {
+transform: translateX(30px);
+}
+.fadeRight.visible {
+opacity: 1;
+transform: translateX(0);
 }

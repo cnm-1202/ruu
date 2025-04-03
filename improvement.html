@@ -30,11 +30,12 @@
     <!-- ヘッダーここから -->
     <header>
         <div class="header">
-            <img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"><img src="./img/menu.svg" alt="メニュー" class="header__menuImg">
+            <img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
 
         <!-- メニュー -->
-        <nav id="jsNav" class="jsNav active">
-            <img src="./img/closeBtn.svg" id="jsNav__closeBtn" class="jsNav__closeBtn">
+        <div id="overlay" class="overlay"></div>
+        <nav id="jsNav" class="jsNav">
+            <img src="./img/closeBtn.svg" id="closeBtn" class="jsNav__closeBtn">
             <ul class="jsNav__menu">
                 <a href="#top" class="jsNav__list"><li><p>TOP</p></li></a>
                 <a href="#concept" class="jsNav__list"><li><p>CONCEPT</p></li></a>
@@ -56,7 +57,7 @@
     <main>
     <!-- FV -->
         <div class="improvementFv">
-            <div class="improvementFv__hist">
+            <div class="improvementFv__hist fadeUp">
                 <h2 class="improvementFv__ttl">History</h2>
                 <h3 class="improvementFv__details">妻の髪がどんなトリートメントを施しても効果が出づらく<br>
                     研究に研究を重ねた結果、<br>
@@ -85,7 +86,7 @@
                 <h3 class="improvement__details">完全トリートメント領域の成分で調合するので髪が全く傷まず、<br>
                     全ての髪質やダメージに対応可能</h3>
 
-            <div class="improvementContents">
+            <div class="improvementContents fadeUp">
                 <img src="./img/improvement_pic.webp" alt="Ruu 髪質改善画像" class="improvementContents__img">
 
                 <h3 class="improvementContents__details">約10種類の商材を髪質に合わせて<br>
@@ -112,11 +113,11 @@
                 <div class="ttlUnderBar"></div>
 
             <div class="improvementColorImg">
-                <img src="./img/improvementcolor_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01">
-                <img src="./img/improvementcolor_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02">
+                <img src="./img/improvementcolor_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight">
+                <img src="./img/improvementcolor_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft">
             </div>
 
-            <div class="improvementColorTxts">
+            <div class="improvementColorTxts fadeUp split">
                 <p>髪質改善再整カラーは次世代のカラーリング技術で、<br>
                     髪の質感を劇的に改善しながら理想の色合いを実現します<br>
                     <br>
@@ -152,7 +153,7 @@
 
     <!-- RESERVATION -->
     <div class="section">
-        <div id="reservation" class="reservation">
+        <div id="reservation" class="reservation fadeUp">
 
             <a href="https://lin.ee/wPSXxHY "><div class="reservation__btn"><img src="./img/line.svg" class="reservation__logo"><p class="reservation__label">Official LINE</p></div></a>
 
