@@ -8,6 +8,40 @@ $black: #333631;
 $gray: #767676;
 $gold: #C5B589;
 
+// メディアクエリ
+
+$tab: 960px;
+@mixin tab {
+    @media screen and (max-width: $tab) {
+        @content;
+    }
+}
+$sp: 600px;
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content;
+    }
+}
+
+.pcOnly {
+    display: block;
+    @include tab {
+        display: none;
+    }
+}
+.tabAndSp {
+    display: none;
+    @include tab {
+        display: block;
+    }
+}
+.spOnly {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
+
 body {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-style: normal;
@@ -30,11 +64,25 @@ h2,h3 {
 }
 
 .section {
-    border: red solid 1px;
+    border: black solid 1px;
     overflow: hidden;
     max-width: 109.2rem;
     margin: 15rem auto;
 }
+
+@include tab {
+    .section{
+        margin: 7rem 2.5rem;
+    }
+}
+
+@include sp {
+    .section{
+        margin: 7rem auto;
+    }
+
+}
+
 
 @mixin accentFont($weight: "bold") {
     font-family: "Averia Serif Libre", serif;
@@ -58,6 +106,7 @@ h2,h3 {
 .highlight {
     color: $gold;
 }
+
 
 //ヘッダー
 
@@ -187,12 +236,12 @@ body.isActive {
 
 // FV
 
-.fv {
+.swiper {
     border: red solid 1px;
     display: flex;
     justify-content: flex-end;
 
-    &__img {
+    img {
         max-width: 116rem;
         height: 68rem;
         margin-top: 4vw;
@@ -285,6 +334,36 @@ body.isActive {
     transform: rotate(90deg);
 }
 
+@include tab {
+    .swiper {
+
+        img {
+            margin-top: 13%;
+            margin-right: 0;
+            margin-left: 0;
+    }
+    }
+
+    .jsNav {
+        width: 100%;
+    }
+}
+
+@include sp {
+    .swiper {
+
+        img {
+            margin-top: 13%;
+            margin-right: 0;
+            margin-left: 0;
+    }
+    }
+
+    .jsNav {
+        width: 100%;
+    }
+}
+
 // CONCEPT
 
 .concept {
@@ -326,7 +405,6 @@ body.isActive {
         margin-left: 6rem;
         margin-bottom: 10rem;
     }
-
 }
 
 .conceptSupport {
@@ -346,9 +424,91 @@ body.isActive {
     background-color: $black;
     width: 50%;
     height: 40rem;
-    top: 20vw;
+    top: 90%;
     left: 2vw;
     z-index: 0;
+}
+
+@include tab {
+    .concept {
+
+        .conceptTxts__ttl{
+            font-size: 3.2rem;
+        }
+
+        img {
+            position: static;
+            width: 100%;
+            max-width: 55rem;
+            margin-left: auto;
+        }
+    }
+
+    .conceptTxts {
+
+        &__details {
+            margin-left: 6rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .conceptTxts::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $black;
+        width: 60%;
+        height: 50rem;
+        top: 200%;
+        left: 3vw;
+        z-index: 0;
+    }
+
+    .conceptSupport {
+        margin-top: -5vw;
+        margin-bottom: 7rem;
+    }
+}
+
+@include sp {
+    .concept {
+
+        .conceptTxts__ttl{
+            font-size: 3.2rem;
+        }
+
+        img {
+            position: static;
+            width: 100%;
+            max-width: 45rem;
+            margin-left: auto;
+        }
+    }
+
+    .conceptTxts {
+
+        &__details {
+            margin-left: 6rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .conceptTxts::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $black;
+        width: 70%;
+        height: 35rem;
+        top: 270%;
+        left: 3vw;
+        z-index: 0;
+    }
+
+    .conceptSupport {
+        margin-top: 5rem;
+    }
+
 }
 
 // PROFILE
@@ -369,23 +529,26 @@ body.isActive {
 }
 
 .profileContents {
+    border: solid 1px purple;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 44rem;
 }
 
 .profileImg {
     border: blue solid 1px;
+    max-width: 40rem;
+    max-height: 44rem;
+    object-fit: cover;
 }
 
 .profileTxts {
     border: green solid 1px;
-    width: 62%;
+    width: 64%;
     background-color: $black;
     color: $offwhite;
-    padding-top: 10rem;
-    padding-left: 6rem;
+    padding-top: 10.5rem;
+    padding-left: 10%;
 
     &__name {
         font-size: 2.4rem;
@@ -396,10 +559,68 @@ body.isActive {
     }
 
     &__details {
-        margin-left: 12.7rem;
         margin-top: 4rem;
         line-height: 4rem;
+        margin-left: 12.5rem;
     }
+}
+
+@include tab {
+
+    .profileContents {
+        height: 44rem;
+    }
+
+    .profile__ttl {
+        font-size: 3.2rem;
+    }
+
+    .profileImg {
+        border: blue solid 1px;
+        max-width: 40rem;
+        max-height: 44rem;
+        object-fit: cover;
+    }
+
+    .profileTxts {
+        padding: 12rem 0 0 1rem;
+        padding-left: 8%;
+
+        &__name {
+            font-size: 2rem;
+        }
+
+        &__career {
+            margin-left: 10.5rem;
+        }
+
+        &__details {
+            margin-top: 2rem;
+            line-height: 4rem;
+            margin-left: 0;
+        }
+    }
+}
+
+
+@include sp {
+    .profile__ttl {
+        font-size: 3.2rem;
+    }
+
+    .profileContents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profileImg {
+        border: blue solid 1px;
+        max-width: 40rem;
+        max-height: 44rem;
+        object-fit: cover;
+
+}
 }
 
 // MENU
@@ -441,18 +662,10 @@ body.isActive {
     position: absolute;
     background-color: $black;
     width: 70%;
-    height: 46rem;
-    top: 18vw;
+    height: 70%;
+    top: 40%;
     left: -10vw;
     z-index: -1;
-}
-
-.menu__img::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background-color: $black;
-    width: 50%;
 }
 
 .menuTxts {
@@ -465,7 +678,28 @@ body.isActive {
     right: 0;
 
     &__details {
+        font-weight: 600;
         font-size: 2rem;
+    }
+}
+
+@include tab {
+
+    .menu {
+
+        &__ttl {
+            font-size: 3.2rem;
+        }
+    }
+
+    .menuTxts {
+        top: 7vw;
+        right: 0;
+
+        &__details {
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -874,6 +1108,7 @@ li {
     background-image: url("/img/humanstemcellsFv.webp");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right;
     height: 65rem;
     width: 100%;
     display: flex;
@@ -1036,14 +1271,19 @@ li {
     }
 
     dd {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         margin-bottom: 1rem;
+        margin-left: 3.4rem;
+        position: relative;
 
         &::before {
+            position: absolute;
             content: "A";
             margin-right: 1rem;
             @include accentFont;
             font-size: 3rem;
+            left: -3.3rem;
+            top: -0.8rem;
         }
         }
 

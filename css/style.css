@@ -87,6 +87,33 @@ html {
   font-size: 62.5%;
 }
 
+.pcOnly {
+  display: block;
+}
+@media screen and (max-width: 960px) {
+  .pcOnly {
+    display: none;
+  }
+}
+
+.tabAndSp {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .tabAndSp {
+    display: block;
+  }
+}
+
+.spOnly {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .spOnly {
+    display: block;
+  }
+}
+
 body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-style: normal;
@@ -109,12 +136,22 @@ h2, h3 {
 }
 
 .section {
-  border: red solid 1px;
+  border: black solid 1px;
   overflow: hidden;
   max-width: 109.2rem;
   margin: 15rem auto;
 }
 
+@media screen and (max-width: 960px) {
+  .section {
+    margin: 7rem 2.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section {
+    margin: 7rem auto;
+  }
+}
 .access, .reservation, .menu, .concept {
   display: flex;
   justify-content: space-between;
@@ -244,12 +281,12 @@ body.isActive {
   opacity: 1;
 }
 
-.fv {
+.swiper {
   border: red solid 1px;
   display: flex;
   justify-content: flex-end;
 }
-.fv__img {
+.swiper img {
   max-width: 116rem;
   height: 68rem;
   margin-top: 4vw;
@@ -337,6 +374,26 @@ body.isActive {
   transform: rotate(90deg);
 }
 
+@media screen and (max-width: 960px) {
+  .swiper img {
+    margin-top: 13%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .jsNav {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .swiper img {
+    margin-top: 13%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .jsNav {
+    width: 100%;
+  }
+}
 .concept {
   border: blue solid 1px;
   flex-direction: column;
@@ -393,11 +450,70 @@ body.isActive {
   background-color: #333631;
   width: 50%;
   height: 40rem;
-  top: 20vw;
+  top: 90%;
   left: 2vw;
   z-index: 0;
 }
 
+@media screen and (max-width: 960px) {
+  .concept .conceptTxts__ttl {
+    font-size: 3.2rem;
+  }
+  .concept img {
+    position: static;
+    width: 100%;
+    max-width: 55rem;
+    margin-left: auto;
+  }
+  .conceptTxts__details {
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+  }
+  .conceptTxts::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #333631;
+    width: 60%;
+    height: 50rem;
+    top: 200%;
+    left: 3vw;
+    z-index: 0;
+  }
+  .conceptSupport {
+    margin-top: -5vw;
+    margin-bottom: 7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .concept .conceptTxts__ttl {
+    font-size: 3.2rem;
+  }
+  .concept img {
+    position: static;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+  }
+  .conceptTxts__details {
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+  }
+  .conceptTxts::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #333631;
+    width: 70%;
+    height: 35rem;
+    top: 270%;
+    left: 3vw;
+    z-index: 0;
+  }
+  .conceptSupport {
+    margin-top: 5rem;
+  }
+}
 .profile__ttl {
   font-size: 4rem;
   font-family: "Averia Serif Libre", serif;
@@ -413,23 +529,26 @@ body.isActive {
 }
 
 .profileContents {
+  border: solid 1px purple;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  height: 44rem;
 }
 
 .profileImg {
   border: blue solid 1px;
+  max-width: 40rem;
+  max-height: 44rem;
+  object-fit: cover;
 }
 
 .profileTxts {
   border: green solid 1px;
-  width: 62%;
+  width: 64%;
   background-color: #333631;
   color: #F1EFEA;
-  padding-top: 10rem;
-  padding-left: 6rem;
+  padding-top: 10.5rem;
+  padding-left: 10%;
 }
 .profileTxts__name {
   font-size: 2.4rem;
@@ -438,11 +557,56 @@ body.isActive {
   margin-left: 12.7rem;
 }
 .profileTxts__details {
-  margin-left: 12.7rem;
   margin-top: 4rem;
   line-height: 4rem;
+  margin-left: 12.5rem;
 }
 
+@media screen and (max-width: 960px) {
+  .profileContents {
+    height: 44rem;
+  }
+  .profile__ttl {
+    font-size: 3.2rem;
+  }
+  .profileImg {
+    border: blue solid 1px;
+    max-width: 40rem;
+    max-height: 44rem;
+    object-fit: cover;
+  }
+  .profileTxts {
+    padding: 12rem 0 0 1rem;
+    padding-left: 8%;
+  }
+  .profileTxts__name {
+    font-size: 2rem;
+  }
+  .profileTxts__career {
+    margin-left: 10.5rem;
+  }
+  .profileTxts__details {
+    margin-top: 2rem;
+    line-height: 4rem;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile__ttl {
+    font-size: 3.2rem;
+  }
+  .profileContents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profileImg {
+    border: blue solid 1px;
+    max-width: 40rem;
+    max-height: 44rem;
+    object-fit: cover;
+  }
+}
 .menu {
   border: blue solid 1px;
   flex-direction: column;
@@ -479,18 +643,10 @@ body.isActive {
   position: absolute;
   background-color: #333631;
   width: 70%;
-  height: 46rem;
-  top: 18vw;
+  height: 70%;
+  top: 40%;
   left: -10vw;
   z-index: -1;
-}
-
-.menu__img::after {
-  content: "";
-  position: absolute;
-  display: block;
-  background-color: #333631;
-  width: 50%;
 }
 
 .menuTxts {
@@ -503,9 +659,23 @@ body.isActive {
   right: 0;
 }
 .menuTxts__details {
+  font-weight: 600;
   font-size: 2rem;
 }
 
+@media screen and (max-width: 960px) {
+  .menu__ttl {
+    font-size: 3.2rem;
+  }
+  .menuTxts {
+    top: 7vw;
+    right: 0;
+  }
+  .menuTxts__details {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+}
 .btnArea {
   display: flex;
   justify-content: flex-end;
@@ -856,6 +1026,7 @@ body.isActive {
   background-image: url("/img/humanstemcellsFv.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: right;
   height: 65rem;
   width: 100%;
   display: flex;
@@ -985,10 +1156,13 @@ body.isActive {
   font-size: 3rem;
 }
 .kyoukamiQandaList dd {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
+  margin-left: 3.4rem;
+  position: relative;
 }
 .kyoukamiQandaList dd::before {
+  position: absolute;
   content: "A";
   margin-right: 1rem;
   font-family: "Averia Serif Libre", serif;
@@ -996,6 +1170,8 @@ body.isActive {
   letter-spacing: 0.1rem;
   font-style: normal;
   font-size: 3rem;
+  left: -3.3rem;
+  top: -0.8rem;
 }
 .kyoukamiQandaList__qa {
   font-family: "Averia Serif Libre", serif;
