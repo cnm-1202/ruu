@@ -143,16 +143,22 @@ h2, h3 {
 }
 
 @media screen and (max-width: 960px) {
+  .body {
+    font-size: 1.4rem;
+  }
   .section {
     margin: 7rem 2.5rem;
   }
 }
 @media screen and (max-width: 600px) {
+  .body {
+    font-size: 1.4rem;
+  }
   .section {
     margin: 7rem auto;
   }
 }
-.access, .reservation, .menu, .concept {
+.reservation, .news, .menu, .concept {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -175,14 +181,15 @@ h2, h3 {
   position: fixed;
   width: 100%;
   align-items: center;
-  margin: 0 auto;
   z-index: 2;
+  box-sizing: border-box;
 }
 .header__logoImg {
   margin: 2.1rem auto 2.1rem 3rem;
 }
 .header__menuImg {
-  margin: 1.6rem 3rem 1.6rem auto;
+  margin-top: 1.6rem;
+  margin-right: 3rem;
   cursor: pointer;
 }
 
@@ -254,6 +261,7 @@ body.isActive {
 }
 .jsNav__logo {
   border: red solid 1px;
+  display: block;
   width: 10rem;
   margin: 7rem auto;
 }
@@ -283,13 +291,11 @@ body.isActive {
 
 .swiper {
   border: red solid 1px;
-  display: flex;
-  justify-content: flex-end;
 }
 .swiper img {
   max-width: 116rem;
   height: 68rem;
-  margin-top: 4vw;
+  margin-top: 10rem;
   margin-right: 7vw;
   margin-left: 20vw;
 }
@@ -376,7 +382,7 @@ body.isActive {
 
 @media screen and (max-width: 960px) {
   .swiper img {
-    margin-top: 13%;
+    margin-top: 10rem;
     margin-right: 0;
     margin-left: 0;
   }
@@ -386,9 +392,10 @@ body.isActive {
 }
 @media screen and (max-width: 600px) {
   .swiper img {
-    margin-top: 13%;
+    margin-top: 10rem;
     margin-right: 0;
     margin-left: 0;
+    height: 60rem;
   }
   .jsNav {
     width: 100%;
@@ -416,6 +423,8 @@ body.isActive {
   font-weight: 400;
   letter-spacing: 0.1rem;
   font-style: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   padding: 0 0.1em 0.2em;
   margin-bottom: 3rem;
   border-bottom: 0.1rem solid #767676;
@@ -437,6 +446,8 @@ body.isActive {
   position: relative;
   background-color: #fdfdfd;
   text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   padding: 6rem 7rem;
   margin: 3vw auto;
   max-width: 70rem;
@@ -486,20 +497,17 @@ body.isActive {
   }
 }
 @media screen and (max-width: 600px) {
-  .concept .conceptTxts__ttl {
-    font-size: 3.2rem;
+  .concept {
+    font-size: 1.4rem;
   }
-  .concept img {
-    position: static;
+  .concept .conceptTxts {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .concept .conceptTxts__details {
     width: 100%;
-    max-width: 45rem;
-    margin-left: auto;
   }
-  .conceptTxts__details {
-    margin-left: 6rem;
-    margin-bottom: 2rem;
-  }
-  .conceptTxts::after {
+  .concept .conceptTxts::after {
     content: "";
     position: absolute;
     display: block;
@@ -507,11 +515,11 @@ body.isActive {
     width: 70%;
     height: 35rem;
     top: 270%;
-    left: 3vw;
+    left: -2rem;
     z-index: 0;
   }
-  .conceptSupport {
-    margin-top: 5rem;
+  .concept .conceptSupport {
+    margin-top: 2rem;
   }
 }
 .profile__ttl {
@@ -563,21 +571,21 @@ body.isActive {
 }
 
 @media screen and (max-width: 960px) {
-  .profileContents {
-    height: 44rem;
-  }
   .profile__ttl {
     font-size: 3.2rem;
   }
   .profileImg {
     border: blue solid 1px;
-    max-width: 40rem;
-    max-height: 44rem;
-    object-fit: cover;
+    height: 44rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-image: url(../img/profile_pic.webp);
   }
   .profileTxts {
-    padding: 12rem 0 0 1rem;
-    padding-left: 8%;
+    padding: 5rem;
+    width: 100%;
   }
   .profileTxts__name {
     font-size: 2rem;
@@ -592,6 +600,9 @@ body.isActive {
   }
 }
 @media screen and (max-width: 600px) {
+  .profile {
+    font-size: 1.4rem;
+  }
   .profile__ttl {
     font-size: 3.2rem;
   }
@@ -599,6 +610,7 @@ body.isActive {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   .profileImg {
     border: blue solid 1px;
@@ -606,12 +618,26 @@ body.isActive {
     max-height: 44rem;
     object-fit: cover;
   }
+  .profileTxts {
+    padding: 7.5rem;
+    width: 100%;
+  }
+  .profileTxts__name {
+    font-size: 2rem;
+  }
+  .profileTxts__career {
+    margin-left: 10.5rem;
+  }
+  .profileTxts__details {
+    margin-top: 2rem;
+    line-height: 4rem;
+    margin-left: 10.5rem;
+  }
 }
 .menu {
   border: blue solid 1px;
   flex-direction: column;
   position: relative;
-  height: 100rem;
 }
 .menu__ttl {
   font-size: 4rem;
@@ -651,15 +677,12 @@ body.isActive {
 
 .menuTxts {
   position: absolute;
-  background-color: #F1EFEA;
-  opacity: 75%;
+  background-color: rgba(241, 239, 234, 0.75);
   padding: 10rem 6rem;
   z-index: 1;
-  top: 4vw;
   right: 0;
 }
 .menuTxts__details {
-  font-weight: 600;
   font-size: 2rem;
 }
 
@@ -667,13 +690,25 @@ body.isActive {
   .menu__ttl {
     font-size: 3.2rem;
   }
+  .menuImg {
+    margin-right: 0;
+    width: 100%;
+  }
   .menuTxts {
-    top: 7vw;
+    margin-top: 5rem;
     right: 0;
   }
   .menuTxts__details {
-    font-weight: 600;
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu__ttl {
+    margin-left: 2.5rem;
+    font-size: 3.2rem;
+  }
+  .menuTxts {
+    margin-top: 5rem;
   }
 }
 .btnArea {
@@ -714,6 +749,11 @@ body.isActive {
   transition: all 0.5s ease;
 }
 
+@media screen and (max-width: 600px) {
+  .btnArea {
+    justify-content: center;
+  }
+}
 .features {
   border: blue solid 1px;
   display: flex;
@@ -748,35 +788,76 @@ body.isActive {
 .featuresContents a img {
   display: block;
   width: 100%;
-  transition: transform 0.5s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  filter: grayscale(100%);
 }
-.featuresContents a::before {
-  content: "Check!";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.featuresContents a img:hover {
+  filter: grayscale(0%) saturate(100%);
+}
+
+@media screen and (max-width: 960px) {
+  .features__ttl {
+    font-size: 3.2rem;
+  }
+  .featuresContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .featuresContents a:hover::before {
+    opacity: 0;
+  }
+}
+.news {
+  border: blue solid 1px;
+  flex-direction: column;
+  position: relative;
+}
+.news__ttl {
+  font-size: 4rem;
   font-family: "Averia Serif Libre", serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
   font-style: normal;
-  color: #333631;
-  font-size: 4rem;
-  background: rgba(241, 239, 234, 0.9);
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  pointer-events: none;
-}
-.featuresContents a:hover::before {
-  opacity: 1;
+  padding: 0 0.1em 0.2em;
+  margin-bottom: 3rem;
+  border-bottom: 0.1rem solid #767676;
+  background-color: #F1EFEA;
+  max-width: 20rem;
+  text-align: left;
 }
 
+.newsList__item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 0.1rem #767676 solid;
+  padding: 1rem 0 1rem;
+}
+.newsList__item time {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  font-style: normal;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.newsList__txt {
+  margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .news__ttl {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .news {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.4rem;
+  }
+}
 .reservation {
   border: blue solid 1px;
 }
@@ -796,21 +877,27 @@ body.isActive {
   align-items: center;
   border: solid 0.1rem #333631;
   padding: 10rem;
-  width: 35rem;
+  width: 30vw;
   height: 30rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.reservation__btn:hover {
+  background-color: #333631;
+  color: #F1EFEA;
 }
 .reservation__logo {
-  width: 5rem;
   margin-bottom: 3rem;
+  transition: fill 0.3s ease-in-out;
 }
-.reservation__hpb {
-  width: 16.5rem;
-  margin-bottom: 3rem;
+.reservation__label {
+  margin-top: 2rem;
+  white-space: nowrap;
 }
 
 .access {
   border: blue solid 1px;
   margin-bottom: 15rem;
+  display: flex;
 }
 
 .accessTxts {
@@ -840,10 +927,43 @@ body.isActive {
   width: 100%;
 }
 
+@media screen and (max-width: 960px) {
+  .access {
+    flex-direction: column;
+  }
+  .accessTxts {
+    background-color: #333631;
+    color: #F1EFEA;
+    padding-left: 2.5rem;
+    padding-right: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+  }
+  .accessTxts__ttl {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .accessTxts__address {
+    margin-bottom: 2rem;
+  }
+  .accessMap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .access {
+    font-size: 1.4rem;
+  }
+}
 .footer {
   position: relative;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 10rem;
@@ -857,6 +977,17 @@ body.isActive {
   color: #333631;
 }
 
+.footerMenu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.footerMenu li {
+  margin-left: 4rem;
+}
 .footerMenu__label {
   position: relative;
 }
@@ -882,17 +1013,6 @@ body.isActive {
 .footerMenu__label:hover::after {
   width: 100%;
 }
-.footerMenu ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 8rem;
-}
-.footerMenu li {
-  margin-left: 4rem;
-}
 
 .copyright {
   font-family: "Averia Serif Libre", serif;
@@ -912,6 +1032,32 @@ body.isActive {
   background-color: #767676;
 }
 
+@media screen and (max-width: 960px) {
+  .footerMenu {
+    border: 1px red solid;
+    margin-left: 0;
+    width: 100%;
+  }
+  .footerMenu ul {
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 4rem;
+  }
+  .footerMenu li {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 0.1rem;
+    background-color: #767676;
+  }
+}
 .improvementFv {
   background-image: url("/img/improvementFv.webp");
   background-size: cover;

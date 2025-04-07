@@ -71,12 +71,21 @@ h2,h3 {
 }
 
 @include tab {
+
+    .body {
+        font-size: 1.4rem;
+    }
     .section{
         margin: 7rem 2.5rem;
     }
 }
 
 @include sp {
+
+    .body {
+        font-size: 1.4rem;
+    }
+
     .section{
         margin: 7rem auto;
     }
@@ -89,6 +98,11 @@ h2,h3 {
     font-weight: 400;
     letter-spacing: 0.1rem;
     font-style: normal;
+}
+
+@mixin wordBreak {
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 %left-flex-style {
@@ -117,15 +131,16 @@ h2,h3 {
     position: fixed;
     width: 100%;
     align-items: center;
-    margin: 0 auto;
     z-index: 2;
+    box-sizing: border-box;
 
     &__logoImg {
         margin: 2.1rem auto 2.1rem 3rem;
     }
 
     &__menuImg {
-        margin: 1.6rem 3rem 1.6rem auto;
+        margin-top: 1.6rem;
+        margin-right: 3rem;
         cursor: pointer;
     }
 }
@@ -206,6 +221,7 @@ body.isActive {
 
     &__logo {
         border: red solid 1px;
+        display: block;
         width: 10rem;
         margin: 7rem auto;
     }
@@ -238,13 +254,11 @@ body.isActive {
 
 .swiper {
     border: red solid 1px;
-    display: flex;
-    justify-content: flex-end;
 
     img {
         max-width: 116rem;
         height: 68rem;
-        margin-top: 4vw;
+        margin-top: 10rem;
         margin-right: 7vw;
         margin-left: 20vw;
     }
@@ -338,7 +352,7 @@ body.isActive {
     .swiper {
 
         img {
-            margin-top: 13%;
+            margin-top: 10rem;
             margin-right: 0;
             margin-left: 0;
     }
@@ -353,9 +367,10 @@ body.isActive {
     .swiper {
 
         img {
-            margin-top: 13%;
+            margin-top: 10rem;
             margin-right: 0;
             margin-left: 0;
+            height: 60rem;
     }
     }
 
@@ -387,6 +402,7 @@ body.isActive {
     &__ttl {
         font-size: 4rem;
         @include accentFont;
+        @include wordBreak;
         padding:0 .1em .2em;
         margin-bottom: 3rem;
         border-bottom: 0.1rem solid $gray;
@@ -411,6 +427,7 @@ body.isActive {
     position: relative;
     background-color: $white;
     text-align: center;
+    @include wordBreak;
     padding: 6rem 7rem;
     margin: 3vw auto;
     max-width: 70rem;
@@ -472,24 +489,14 @@ body.isActive {
 
 @include sp {
     .concept {
+        font-size: 1.4rem;
 
-        .conceptTxts__ttl{
-            font-size: 3.2rem;
-        }
-
-        img {
-            position: static;
-            width: 100%;
-            max-width: 45rem;
-            margin-left: auto;
-        }
-    }
-
-    .conceptTxts {
+        .conceptTxts {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
 
         &__details {
-            margin-left: 6rem;
-            margin-bottom: 2rem;
+            width: 100%;
         }
     }
 
@@ -501,15 +508,14 @@ body.isActive {
         width: 70%;
         height: 35rem;
         top: 270%;
-        left: 3vw;
+        left: -2rem;
         z-index: 0;
     }
 
     .conceptSupport {
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
-
-}
+}}
 
 // PROFILE
 
@@ -567,24 +573,23 @@ body.isActive {
 
 @include tab {
 
-    .profileContents {
-        height: 44rem;
-    }
-
     .profile__ttl {
         font-size: 3.2rem;
     }
 
     .profileImg {
         border: blue solid 1px;
-        max-width: 40rem;
-        max-height: 44rem;
-        object-fit: cover;
+        height: 44rem;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-image: url(../img/profile_pic.webp);
     }
 
     .profileTxts {
-        padding: 12rem 0 0 1rem;
-        padding-left: 8%;
+        padding: 5rem;
+        width: 100%;
 
         &__name {
             font-size: 2rem;
@@ -604,6 +609,10 @@ body.isActive {
 
 
 @include sp {
+    .profile{
+    font-size: 1.4rem;
+    }
+
     .profile__ttl {
         font-size: 3.2rem;
     }
@@ -612,6 +621,7 @@ body.isActive {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .profileImg {
@@ -619,9 +629,27 @@ body.isActive {
         max-width: 40rem;
         max-height: 44rem;
         object-fit: cover;
+    }
 
-}
-}
+        .profileTxts {
+            padding: 7.5rem;
+            width: 100%;
+
+            &__name {
+                font-size: 2rem;
+            }
+
+            &__career {
+                margin-left: 10.5rem;
+            }
+
+            &__details {
+                margin-top: 2rem;
+                line-height: 4rem;
+                margin-left: 10.5rem;
+            }
+        }
+    }
 
 // MENU
 
@@ -630,7 +658,6 @@ body.isActive {
     @extend %left-flex-style;
     flex-direction: column;
     position: relative;
-    height: 100rem;
 
     &__ttl {
         font-size: 4rem;
@@ -670,15 +697,12 @@ body.isActive {
 
 .menuTxts {
     position: absolute;
-    background-color: $offwhite;
-    opacity: 75%;
+    background-color: rgb(241, 239, 234, 75%);
     padding: 10rem 6rem;
     z-index: 1;
-    top: 4vw;
     right: 0;
 
     &__details {
-        font-weight: 600;
         font-size: 2rem;
     }
 }
@@ -686,21 +710,39 @@ body.isActive {
 @include tab {
 
     .menu {
-
         &__ttl {
             font-size: 3.2rem;
         }
     }
 
+    .menuImg {
+        margin-right: 0;
+        width: 100%;
+    }
+
     .menuTxts {
-        top: 7vw;
+        margin-top: 5rem;
         right: 0;
 
         &__details {
-            font-weight: 600;
             font-size: 1.8rem;
         }
     }
+}
+
+@include sp {
+
+    .menu {
+        &__ttl {
+            margin-left: 2.5rem;
+            font-size: 3.2rem;
+        }
+    }
+
+    .menuTxts {
+        margin-top: 5rem;
+
+}
 }
 
 // ボタン
@@ -744,7 +786,11 @@ body.isActive {
     }
 }
 
-// NEWS
+@include sp {
+    .btnArea {
+    justify-content: center;
+    }
+}
 
 
 // FEATURES
@@ -766,7 +812,6 @@ body.isActive {
         width: 20rem;
         text-align: center;
     }
-
 }
 
 .featuresContents {
@@ -782,34 +827,93 @@ body.isActive {
         img {
             display: block;
             width: 100%;
-            transition: transform 0.5s ease-in-out;
+            transition: filter 0.3s ease-in-out;
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: grayscale(0%) saturate(100%);
+            }
         }
 
-        &::before {
-            content: "Check!";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            @include accentFont;
-            color: $black;
-            font-size: 4rem;
-            background: rgba(241, 239, 234, 0.9);
-            width: 30rem;
-            height: 30rem;
-            border-radius: 50%;
-            transform: translate(-50%, -50%); //
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
-            pointer-events: none;
-        }
+    }
+}
 
-        &:hover::before {
-            opacity: 1;
+
+@include tab {
+
+    .features {
+        &__ttl {
+            font-size: 3.2rem;
         }
     }
+
+    .featuresContents {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        a{
+        &:hover::before {
+            opacity: 0;
+        }
+    }
+    }
+}
+
+// NEWS
+
+.news {
+    border: blue solid 1px;
+    @extend %left-flex-style;
+    flex-direction: column;
+    position: relative;
+
+    &__ttl {
+        font-size: 4rem;
+        @include accentFont;
+        padding:0 .1em .2em;
+        margin-bottom: 3rem;
+        border-bottom: 0.1rem solid $gray;
+        background-color: $offwhite;
+        max-width: 20rem;
+        text-align: left;
+    }
+}
+
+.newsList {
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        border-bottom: 0.1rem $gray solid;
+        padding: 1rem 0 1rem;
+
+        time {
+        @include accentFont;
+        font-weight: bold;
+        white-space: nowrap;
+        }
+    }
+
+    &__txt {
+        margin: 0;
+    }
+}
+
+@include tab {
+    .news {
+    &__ttl {
+        font-size: 3.2rem;
+    }
+}
+}
+
+@include sp {
+    .news {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        font-size: 1.4rem;
+}
 }
 
 
@@ -833,19 +937,25 @@ body.isActive {
         align-items: center;
         border: solid 0.1rem $black;
         padding: 10rem;
-        width: 35rem;
+        width: 30vw;
         height: 30rem;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: $black;
+            color: $offwhite;
+        }
     }
 
     &__logo {
-        width: 5rem;
         margin-bottom: 3rem;
+        transition: fill 0.3s ease-in-out;
+
     }
 
-    &__hpb {
-        width: 16.5rem;
-        margin-bottom: 3rem;
-
+    &__label {
+        margin-top: 2rem;
+        white-space: nowrap
     }
 }
 
@@ -853,8 +963,8 @@ body.isActive {
 
 .access {
     border: blue solid 1px;
-    @extend %left-flex-style;
     margin-bottom: 15rem;
+    display: flex;
 }
 
 .accessTxts {
@@ -884,12 +994,49 @@ body.isActive {
     }
 }
 
+@include tab {
+
+    .access{
+    flex-direction: column;
+    }
+
+    .accessTxts {
+        background-color: $black;
+        color: $offwhite;
+        padding-left: 2.5rem;
+        padding-right: auto;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 100%;
+
+        &__ttl {
+            @include accentFont;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        &__address {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .accessMap {
+        width: 100%;
+}
+}
+
+@include sp {
+    .access {
+        font-size: 1.4rem;
+    }
+}
+
 // フッター
 
 .footer {
     position: relative;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 10rem;
@@ -902,6 +1049,19 @@ body.isActive {
 }
 
 .footerMenu{
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    li {
+        margin-left: 4rem;
+    }
 
     &__label{
         position: relative;
@@ -933,19 +1093,8 @@ body.isActive {
             }
         }
     }
+    }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5rem;
-    margin-bottom: 8rem;
-}
-
-li {
-    margin-left: 4rem;
-}}
 
 .copyright {
     @include accentFont;
@@ -960,6 +1109,37 @@ li {
     width: 60%;
     height: 0.1rem;
     background-color: $gray;
+}
+
+@include tab {
+
+    .footerMenu {
+        border: 1px red solid;
+        margin-left: 0;
+        width: 100%;
+
+        ul {
+            border: 1px red solid;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 4rem;
+        }
+
+        li {
+            margin-top: 2rem;
+            margin-left: 0;
+        }
+    }
+
+    .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 80%;
+        height: 0.1rem;
+        background-color: $gray;
+    }
 }
 
 // 髪質改善ページ
