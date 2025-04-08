@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Ruu｜箕面市桜井のプライベートヘアサロン</title>
 
-        <!-- style.css 読み込み -->
-        <link rel="stylesheet" href="./css/style.css" />
+    <!-- style.css 読み込み -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-        <!-- フォント読み込み -->
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <!-- Zen Kaku Gothic New -->
-        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-
-        <!-- Averia Serif Libre -->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Darumadrop+One&family=Mohave:ital,wght@0,300..700;1,300..700&family=Nanum+Gothic&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-
-        <!-- フォントここまで -->
-
+    <!-- Google Fontsまとめて読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Darumadrop+One&family=Mohave:ital,wght@0,300..700;1,300..700&family=Nanum+Gothic&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- フォントここまで -->
 </head>
 
 <body>
@@ -30,174 +23,184 @@
         <div class="header">
             <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"></a><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
 
-        <!-- メニュー -->
+    <!-- メニュー -->
         <div id="overlay" class="overlay"></div>
         <nav id="jsNav" class="jsNav">
-            <img src="./img/closeBtn.svg" id="closeBtn" class="jsNav__closeBtn">
+            <img src="./img/closeBtn.svg" id="closeBtn" alt="メニューを閉じる" class="jsNav__closeBtn">
             <ul class="jsNav__menu">
-                <a href="#top" class="jsNav__list"><li><p>TOP</p></li></a>
-                <a href="#concept" class="jsNav__list"><li><p>CONCEPT</p></li></a>
-                <a href="#profile" class="jsNav__list"><li><p>PROFILE</p></li></a>
-                <a href="#menu" class="jsNav__list"><li><p>MENU</p></li></a>
-                <a href="#features" class="jsNav__list"><li><p>FEATURES</p></li></a>
-                <a href="#news" class="jsNav__list"><li><p>NEWS</p></li></a>
-                <a href="https://beauty.hotpepper.jp/slnH000705260/" class="jsNav__list"><li><p>RESERVATION</p></li></a>
+                <li class="jsNav__list"><a href="#top">TOP</a></li>
+                <li class="jsNav__list"><a href="#concept">CONCEPT</a></li>
+                <li class="jsNav__list"><a href="#profile">PROFILE</a></li>
+                <li class="jsNav__list"><a href="#menu">MENU</a></li>
+                <li class="jsNav__list"><a href="#features">FEATURES</a></li>
+                <li class="jsNav__list"><a href="#news">NEWS</a></li>
+                <li class="jsNav__list"><a href="https://beauty.hotpepper.jp/slnH000705260/">RESERVATION</a></li>
             </ul>
             <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="jsNav__logo"></a>
         </nav>
-
-        <!-- メニューここまで -->
         </div>
+    <!-- メニューここまで -->
     </header>
 
     <!-- ヘッダーここまで -->
 
     <main>
     <!-- FV -->
-    <div class="swiper">
-        <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="./img/FV.webp" alt="Ruu TOP画像">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/FV.webp" alt="Ruuのファーストビュー1枚目">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/FV_2.webp" alt="Ruuのファーストビュー2枚目">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/FV_3.webp" alt="Ruuのファーストビュー3枚目">
+                </div>
+            </div>
         </div>
-        <div class="swiper-slide">
-            <img src="./img/FV_2.webp" alt="Ruu TOP画像">
-        </div>
-        <div class="swiper-slide">
-            <img src="./img/FV_3.webp" alt="Ruu TOP画像">
-        </div>
-        </div>
-    </div>
 
         <figure class="fvScrollIcon">
             <div class="fvScrollIcon__scissorsWrapper">
-                <img src="./img/scissors_left.svg" alt class="fvScrollIcon__scissors1">
-                <img src="./img/scissors_right.svg" alt class="fvScrollIcon__scissors2">
+                <img src="./img/scissors_left.svg" alt="左のハサミアイコン" class="fvScrollIcon__scissors1">
+                <img src="./img/scissors_right.svg" alt="右のハサミアイコン" class="fvScrollIcon__scissors2">
             </div>
             <p>scroll</p>
         </figure>
-
     <!-- FVここまで -->
 
     <!-- CONCEPT -->
-    <div class="section">
-        <div id="concept" class="concept">
+        <section class="section" id="concept">
+        <div class="concept">
 
-            <div class="conceptTxts">
-                <h2 class="conceptTxts__ttl">Concept</h2>
-                <h3 class="conceptTxts__message">クセ毛やダメージなど<br>
-                髪質で悩む全ての女性に感動を</h3>
-                <p class="conceptTxts__details">髪やお肌の悩みを解決して、<br>
-                    「いつまでも美しくありたい」を叶えます。</p>
-            </div>
+        <div class="conceptTxts">
+            <h2 class="conceptTxts__ttl">Concept</h2>
+            <h3 class="conceptTxts__message">
+                クセ毛やダメージなど<br>
+                髪質で悩む全ての女性に感動を
+            </h3>
+            <p class="conceptTxts__details">
+                髪やお肌の悩みを解決して、<br>
+                「いつまでも美しくありたい」を叶えます。
+            </p>
+        </div>
 
-            <img src="./img/concept_pic.webp" alt="Ruu コンセプト画像" class="conceptImg fadeUp">
+        <img src="./img/concept_pic.webp" alt="Ruu コンセプト画像" class="conceptImg fadeUp">
 
-            <div class="conceptSupport fadeLeft">
-                <p class="conceptSupport__details">Ruu（ルウ）は、お客様の髪の悩みに寄り添う<br>
+        <div class="conceptSupport fadeLeft">
+            <p class="conceptSupport__details">
+                Ruu（ルウ）は、お客様の髪の悩みに寄り添う<br>
                 完全貸切マンツーマン美容室です。<br>
                 <br>
                 大人女性の3つの悩み<br>
                 「白髪」「髪質の変化」「骨格の変化」にフォーカスし<br>
                 一人ひとりと丁寧に向き合い、髪の悩みを解決して<br>
-                あなたの「<span class="highlight">いつまでも美しくありたい</span>」をサポートします。</p>
-            </div>
-
+                あなたの「<span class="highlight">いつまでも美しくありたい</span>」をサポートします。
+            </p>
         </div>
-    </div>
+        </div>
+        </section>
     <!-- CONCEPTここまで -->
 
     <!-- PROFILE -->
-    <div class="section">
-        <div id="profile" class="profile">
-            <h3 class="profile__ttl">Profile</h3>
+        <section class="section" id="profile">
+        <div class="profile">
+        <h2 class="profile__ttl">Profile</h2>
 
-            <div class="profileContents fadeRight">
-                <div class="profileImg">
-                <img src="./img/profile_pic.webp" alt="Ruu プロフィール画像" class="pcOnly">
-                </div>
+        <div class="profileContents fadeRight">
+            <div class="profileImg">
+                <img src="./img/profile_pic.webp" alt="代表 乾 恵一のプロフィール写真" class="pcOnly">
+            </div>
 
-                <div class="profileTxts">
-                <h2 class="profileTxts__name"><span class="highlight">Ruu 代表</span>　乾 恵一</h2>
-                <h3 class="profileTxts__career">美容師歴15年</h3>
-                <h3 class="profileTxts__details">“<span class="highlight">100回目でも丁寧な美容室</span>”をテーマに<br>
+            <div class="profileTxts">
+                <h3 class="profileTxts__name">
+                    <span class="highlight">Ruu 代表</span>　乾 恵一
+                </h3>
+                <p class="profileTxts__career">美容師歴15年</p>
+                <p class="profileTxts__details">
+                    “<span class="highlight">100回目でも丁寧な美容室</span>”をテーマに<br>
                     お客様のお悩みに寄り添った技術と<br>
-                    温かい接客を心掛けてます。</h3>
-                </div>
+                    温かい接客を心掛けてます。
+                </p>
             </div>
         </div>
-    </div>
-
+        </div>
+        </section>
     <!-- PROFILEここまで -->
 
-    <!-- MENU -->
-    <div class="section">
-        <div id="menu" class="menu">
-            <h3 class="menu__ttl">Menu</h3>
 
-            <div class="menuTxts">
-                <p class="menuTxts__details">Ruuではお客様の髪質に合わせて<br>
+    <!-- MENU -->
+        <section class="section" id="menu">
+        <div class="menu">
+        <h2 class="menu__ttl">Menu</h2>
+
+        <div class="menuTxts">
+            <p class="menuTxts__details">
+                Ruuでは、お客様の髪質に合わせて<br>
                 オーダーメイドでメニューをご提案します。<br>
                 <br>
                 貸切マンツーマン施術なので、<br>
-                今まで言えなかった悩みや理想の髪質など<br>
-                何でもご相談ください。</p>
-            </div>
-
-            <div class="menuImg fadeUp">
-            <img src="./img/menu_pic.webp" alt="Ruu メニュー画像">
-            </div>
-
-            <div class="btnArea">
-                <a href="https://beauty.hotpepper.jp/slnH000705260/" class="btn"><p>Reservation</p></a>
-            </div>
-
+                今まで言えなかった悩みや理想の髪質など、<br>
+                何でもご相談ください。
+            </p>
         </div>
-    </div>
+
+        <div class="menuImg fadeUp">
+            <img src="./img/menu_pic.webp" alt="ヘアメニュー施術風景の画像">
+        </div>
+
+        <div class="btnArea">
+            <a href="https://beauty.hotpepper.jp/slnH000705260/" class="btn">Reservation</a>
+        </div>
+        </div>
+        </section>
     <!-- MENUここまで -->
 
     <!-- FEATURES -->
-        <div id="features" class="features">
-            <h3 class="features__ttl">Features</h3>
+        <section id="features" class="features">
+        <h2 class="features__ttl">Features</h2>
 
-            <div class="featuresContents fadeUp">
+        <div class="featuresContents">
 
-                <a href="improvement.html"><img src="./img/improvement.webp" alt="髪質改善について"></a>
+        <a href="improvement.html">
+            <img src="./img/improvementPC.webp" class="featuresContents__improvement pcOnly">
+            <img src="./img/improvementSP.webp" class="featuresContents__improvement tabAndSp">
+        </a>
 
-            <a href="humanstemcells.html"><img src="./img/humanstemcells.webp" alt="ヒト幹細胞培養液 頭皮の育毛促進プログラム"></a>
+        <a href="humanstemcells.html">
+            <img src="./img/humanstemcellsPC.webp" class="featuresContents__humanstemcells pcOnly">
+            <img src="./img/humanstemcellsSP.webp" class="featuresContents__humanstemcells tabAndSp">
+        </a>
 
-            </div>
         </div>
+        </section>
     <!-- FEATURESここまで -->
 
     <!-- NEWS -->
+        <section id="news" class="section">
+        <div class="news">
+        <h2 class="news__ttl">News</h2>
 
-    <div class="section">
-        <div id="news" class="news">
-            <h3 class="news__ttl">News</h3>
-
-            <ul class="newsList">
-                <li class="newsList__item">
-                <time>2025.05.12</time>
-                <p class="newsList__txt">サイトリニューアルしました。</p>
-                </li>
-                <li class="newsList__item">
-                <time>2025.05.12</time>
-                <p class="newsList__txt">サイトリニューアルしました。</p>
-                </li>
-                <li class="newsList__item">
-                <time>2025.05.12</time>
-                <p class="newsList__txt">サイトリニューアルしました。</p>
-                </li>
-            </ul>
-
-
+        <ul class="newsList">
+        <li class="newsList__item">
+            <time datetime="2025-05-12">2025.05.12</time>
+            <p class="newsList__txt"><span>サイトリニューアルしました。サイトリニューアルしました。サイトリニューアルしました。</span></p>
+        </li>
+        <li class="newsList__item">
+            <time datetime="2025-05-12">2025.05.12</time>
+            <p class="newsList__txt"><span>サイトリニューアルしました。</span></p>
+        </li>
+        <li class="newsList__item">
+            <time datetime="2025-05-12">2025.05.12</time>
+            <p class="newsList__txt"><span>サイトリニューアルしました。</span></p>
+        </li>
+        </ul>
         </div>
-    </div>
-
+        </section>
     <!-- NEWSここまで -->
 
     <!-- RESERVATION -->
-    <div class="section">
+        <section class="section pcOnly">
         <div id="reservation" class="reservation fadeUp">
 
             <a href="https://lin.ee/wPSXxHY "><div class="reservation__btn">
@@ -219,20 +222,45 @@
                 <p class="reservation__label">Instagram</p></div></a>
 
         </div>
-    </div>
+        </section>
     <!-- RESERVATIONここまで -->
+
+    <!-- フローティングバナー -->
+
+    <div id="float" class="float spOnly">
+
+        <a href="https://lin.ee/wPSXxHY " class="float__btn">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 0.00242147C13.4325 0.00242147 0 12.2649 0 27.3945C0 35.0876 3.48396 42.018 9.07516 46.9942C7.8553 54.2805 -0.0257551 57.2468 0.51276 59.2518C7.56029 62.2666 21.5172 55.2684 23.6338 54.1836C25.6802 54.5856 27.8225 54.789 30 54.789C46.5675 54.789 60 42.5241 60 27.3945C60 12.2649 46.5652 0.00242147 30 0.00242147Z" fill="#C5B589" class="float__logo">
+            </svg><p class="float__label">Official LINE</p></a>
+
+        <a href="https://beauty.hotpepper.jp/slnH000705260/
+        " class="float__btn">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="60" rx="10" fill="#C5B589"/>
+            <path d="M17.4126 42.5146H20.6499L20.6689 16.3496H17.4126V14.8643H31.771C34.7544 14.8643 36.9697 15.5498 38.417 16.9209C39.877 18.2793 40.6069 20.0312 40.6069 22.1768C40.6069 24.6777 39.4517 26.5249 37.1411 27.7183C36.4556 28.0737 35.7319 28.353 34.9702 28.5562C37.4204 28.8481 39.293 29.6353 40.5879 30.9175C41.8828 32.1997 42.5303 33.7739 42.5303 35.6401C42.5303 38.2046 41.5908 40.2422 39.7119 41.7529C37.8457 43.251 35.1733 44 31.6948 44H17.4126V42.5146ZM30.457 28.1562C33.2119 28.1562 34.856 26.9756 35.3892 24.6143C35.5542 23.9033 35.6367 23.1416 35.6367 22.3291C35.6367 20.3994 35.3257 19.0029 34.7036 18.1396C33.8657 16.9463 32.2788 16.3496 29.9429 16.3496H25.7915V28.1562H30.457ZM30.2095 42.5146C32.52 42.5146 34.2847 41.9624 35.5034 40.8579C36.7349 39.7534 37.3506 38.1855 37.3506 36.1543C37.3506 33.1709 36.1636 31.1777 33.7896 30.1748C32.9263 29.8066 31.8726 29.6226 30.6284 29.6226H25.7915V42.5146H30.2095Z" fill="#FDFDFD" class="float__logo">
+            </svg>
+            <p class="float__label">Hot Pepper Beauty</p></a>
+
+        <a href="https://www.instagram.com/inuustagram?igshid=YmMyMTA2M2Y%3D" class="float__btn"><svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.0834 0C36.4583 0.00899978 38.1712 0.0269993 39.6501 0.0689983L40.2321 0.0899977C40.904 0.113997 41.567 0.143996 42.368 0.179995C45.5598 0.329992 47.7377 0.83398 49.6486 1.57496C51.6285 2.33694 53.2964 3.36892 54.9643 5.03388C56.4903 6.53304 57.6707 8.34721 58.4231 10.3497C59.1641 12.2607 59.6681 14.4386 59.8181 17.6336C59.8541 18.4316 59.8841 19.0945 59.9081 19.7695L59.9261 20.3515C59.9711 21.8275 59.9891 23.5404 59.9951 26.9153L59.9981 29.1533V33.0832C60.0054 35.2714 59.9824 37.4595 59.9291 39.647L59.9111 40.229C59.8871 40.904 59.8571 41.567 59.8211 42.365C59.6711 45.5599 59.1611 47.7348 58.4231 49.6488C57.6707 51.6513 56.4903 53.4655 54.9643 54.9647C53.4652 56.4907 51.6511 57.6712 49.6486 58.4236C47.7377 59.1646 45.5598 59.6686 42.368 59.8186L40.2321 59.9085L39.6501 59.9265C38.1712 59.9685 36.4583 59.9895 33.0834 59.9955L30.8455 59.9985H26.9187C24.7296 60.0063 22.5405 59.9833 20.3521 59.9295L19.7701 59.9115C19.058 59.8846 18.346 59.8536 17.6342 59.8186C14.4424 59.6686 12.2645 59.1646 10.3506 58.4236C8.34916 57.6708 6.53609 56.4903 5.03784 54.9647C3.51075 53.4658 2.3293 51.6516 1.57602 49.6488C0.835054 47.7378 0.331079 45.5599 0.181087 42.365L0.0910913 40.229L0.0760925 39.647C0.0207934 37.4595 -0.00420805 35.2714 0.00109595 33.0832V26.9153C-0.00720731 24.7272 0.0147939 22.539 0.0670928 20.3515L0.0880917 19.7695C0.11209 19.0945 0.142089 18.4316 0.178087 17.6336C0.328079 14.4386 0.832054 12.2637 1.57302 10.3497C2.32806 8.34639 3.51159 6.53215 5.04084 5.03388C6.53823 3.50856 8.35024 2.32816 10.3506 1.57496C12.2645 0.83398 14.4394 0.329992 17.6342 0.179995C18.4322 0.143996 19.0981 0.113997 19.7701 0.0899977L20.3521 0.071998C22.5395 0.0186977 24.7276 -0.00430399 26.9157 0.00299971L33.0834 0ZM29.9996 14.9996C26.0215 14.9996 22.2064 16.58 19.3935 19.3929C16.5806 22.2059 15.0003 26.0211 15.0003 29.9993C15.0003 33.9774 16.5806 37.7926 19.3935 40.6056C22.2064 43.4186 26.0215 44.9989 29.9996 44.9989C33.9776 44.9989 37.7927 43.4186 40.6056 40.6056C43.4186 37.7926 44.9988 33.9774 44.9988 29.9993C44.9988 26.0211 43.4186 22.2059 40.6056 19.3929C37.7927 16.58 33.9776 14.9996 29.9996 14.9996ZM29.9996 20.9995C31.1814 20.9993 32.3517 21.2319 33.4437 21.684C34.5356 22.1361 35.5278 22.7988 36.3637 23.6344C37.1995 24.47 37.8626 25.462 38.315 26.5538C38.7675 27.6456 39.0004 28.8159 39.0006 29.9978C39.0008 31.1796 38.7682 32.35 38.3162 33.442C37.8641 34.5339 37.2013 35.5262 36.3658 36.362C35.5302 37.1979 34.5382 37.8609 33.4464 38.3134C32.3546 38.7659 31.1844 38.9989 30.0026 38.9991C27.6158 38.9991 25.3267 38.0509 23.6389 36.3631C21.9512 34.6753 21.003 32.3862 21.003 29.9993C21.003 27.6124 21.9512 25.3233 23.6389 23.6355C25.3267 21.9477 27.6158 20.9995 30.0026 20.9995M45.7518 10.4997C44.7573 10.4997 43.8035 10.8948 43.1003 11.5981C42.397 12.3013 42.002 13.2551 42.002 14.2497C42.002 15.2442 42.397 16.198 43.1003 16.9012C43.8035 17.6045 44.7573 17.9996 45.7518 17.9996C46.7463 17.9996 47.7001 17.6045 48.4033 16.9012C49.1065 16.198 49.5016 15.2442 49.5016 14.2497C49.5016 13.2551 49.1065 12.3013 48.4033 11.5981C47.7001 10.8948 46.7463 10.4997 45.7518 10.4997Z" fill="#C5B589" class="float__logo">
+            </svg>
+            <p class="float__label">Instagram</p></a>
+
+    </div>
+
+    <!-- フローティングバナーここまで -->
 
     <!-- ACCESS -->
         <div id="access" class="access">
 
             <div class="accessTxts">
                 <h2 class="accessTxts__ttl">Access</h2>
-                <h2 class="accessTxts__ttl">Ruu</h2>
+                <h2 class="accessTxts__ruu">Ruu</h2>
                 <h3 class="accessTxts__address">〒562-0044 箕面市半町2-2-38グレース桜井</h3>
-                <h3 class="accessTxts__details">阪急箕面線桜井駅徒歩1分<br>
-                    <br>
-                    最寄り：桜井駅前駐車場 22台 駐車料金全額負担<br>
-                    駐輪場：バイク置き場 マンションの駐輪場13番</h3>
+                <h3 class="accessTxts__address">阪急箕面線桜井駅徒歩1分</h3>
+                <p class="accessTxts__details">最寄り：桜井駅前駐車場 22台 駐車料金全額負担<br>
+                駐輪場：バイク置き場 マンションの駐輪場13番</p>
             </div>
 
             <div class="accessMap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11782.360901218088!2d135.46105001334223!3d34.81750704168691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000fbf60e33bbf1%3A0xfd5ab2a00ab11c4!2zUnV144CQ44Or44Km44CR6auq6LOq5pS55ZaE54m55YyWL-ODl-ODqeOCpOODmeODvOODiOOCteODreODsw!5e0!3m2!1sja!2sjp!4v1743497809450!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
@@ -241,28 +269,28 @@
 
     <!-- ACCESSここまで -->
 
-    </main>
+</main>
 
 <!-- フッター -->
 
 <footer>
-    <div class="footer">
-            <div class="footerContents__logo">
-                <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ"></a>
-            </div>
-                <nav class="footerMenu">
-                    <ul>
-                        <a href="#top"><li><p class="footerMenu__label">TOP</p></li></a>
-                        <a href="#concept"><li><p class="footerMenu__label">CONCEPT</p></li></a>
-                        <a href="#profile"><li><p class="footerMenu__label">PROFILE</p></li></a>
-                        <a href="#menu"><li><p>MENU</p class="footerMenu__label"></li></a>
-                        <a href="#features"><li><p  class="footerMenu__label">FEATURES</p></li></a>
-                        <a href="#news"><li><p class="footerMenu__label">NEWS</p></li></a>
-                        <a href="https://beauty.hotpepper.jp/slnH000705260/"><li><p class="footerMenu__label">RESERVATION</p></li></a>
-                    </ul>
-            </nav>
-            <p class="copyright">©2025 Ruu ALL RIGHTS RESERVED.</p>
+    <div id="footer" class="footer">
+        <div class="footerContents__logo">
+            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ"></a>
         </div>
+        <nav class="footerMenu">
+            <ul>
+                <li><a href="#top" class="footerMenu__label">TOP</a></li>
+                <li><a href="#concept" class="footerMenu__label">CONCEPT</a></li>
+                <li><a href="#profile" class="footerMenu__label">PROFILE</a></li>
+                <li><a href="#menu" class="footerMenu__label">MENU</a></li>
+                <li><a href="#features" class="footerMenu__label">FEATURES</a></li>
+                <li><a href="#news" class="footerMenu__label">NEWS</a></li>
+                <li><a href="https://beauty.hotpepper.jp/slnH000705260/" class="footerMenu__label">RESERVATION</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">©2025 Ruu ALL RIGHTS RESERVED.</p>
+    </div>
 </footer>
 
 <!-- フッターここまで -->
