@@ -43,9 +43,9 @@ $sp: 600px;
     }
 }
 .spOnly {
-    display: none;
-    @include sp {
-        display: block;
+    display: block;
+    @include pc {
+        display: none;
     }
 }
 
@@ -1310,7 +1310,6 @@ body.isActive {
         color: $black;
         width: 60%;
     }
-
 }
 
 @include tab {
@@ -1323,6 +1322,29 @@ body.isActive {
             padding-top: 7rem;
             width: 100%;
             text-align: center;
+        }
+    }
+}
+
+@include sp {
+    .improvement {
+
+        &__ttl {
+            font-size: 2.4rem;
+        }
+
+        &__details {
+            font-size: 1.4rem;
+            margin: 4rem 6rem;
+        }
+    }
+
+    .improvementContents {
+
+        &__details {
+            padding-top: 0;
+            margin: 4rem 4rem;
+            font-size: 1.4rem;
         }
     }
 }

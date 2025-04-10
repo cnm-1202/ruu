@@ -107,11 +107,11 @@ html {
 }
 
 .spOnly {
-  display: none;
+  display: block;
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 961px) {
   .spOnly {
-    display: block;
+    display: none;
   }
 }
 
@@ -1201,6 +1201,20 @@ body.isActive {
     padding-top: 7rem;
     width: 100%;
     text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .improvement__ttl {
+    font-size: 2.4rem;
+  }
+  .improvement__details {
+    font-size: 1.4rem;
+    margin: 4rem 6rem;
+  }
+  .improvementContents__details {
+    padding-top: 0;
+    margin: 4rem 4rem;
+    font-size: 1.4rem;
   }
 }
 .improvementColor__ttl {
