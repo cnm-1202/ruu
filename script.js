@@ -110,37 +110,26 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
+
 // ボタンの要素を取得
 const button = document.querySelector('.float');
 
-// フッターの位置を取得
-const footer = document.querySelector('#footer');
+// フッターの要素を取得
+const footer = document.querySelector('.footer');
 
-// 初期状態でのボタンの表示・非表示を判定
+// フッターに達したかどうかでボタンの表示・非表示を切り替える
 function checkButtonVisibility() {
-    const footerRect = footer.getBoundingClientRect(); // フッターの位置とサイズを取得
-    const footerTop = footerRect.top + window.scrollY; // フッターの上端の位置
+    const footerRect = footer.getBoundingClientRect();
+    const footerTop = footerRect.top + window.scrollY;
 
-    // スクロール位置 + ビューアブルエリアの高さ がフッターの上端に達したかを確認
-    if (window.scrollY + window.innerHeight >= footerTop) {
-        button.style.display = 'none'; // フッターの上に達したら非表示
-    } else {
-        button.style.display = 'flex'; // フッター手前では表示
-    }
+    const isOverFooter = window.scrollY + window.innerHeight >= footerTop;
 
-    // 画面幅がPC版でない場合、ボタンを非表示にする
-    if (window.innerWidth >= 960) {  // 768px以上でPC版と判定
-        button.style.display = 'none'; // PCで非表示
-    } else {
-        button.style.display = 'flex'; // モバイルで表示
-    }
+    button.style.display = isOverFooter ? 'none' : 'flex';
 }
 
-// スクロールイベントを監視
+// スクロールとリサイズ時にチェック（リサイズで表示位置が変わる可能性があるため）
 window.addEventListener('scroll', checkButtonVisibility);
-
-// リサイズイベントを監視して、画面幅が変わった際にボタンの表示を調整
 window.addEventListener('resize', checkButtonVisibility);
 
-// 初期チェックを実行
+// 初期チェック
 checkButtonVisibility();
