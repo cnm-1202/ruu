@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.add("active");
         overlay.classList.add("active");
         body.style.overflow = "hidden";
+        button.style.display = 'none';
     });
 
     // メニューを閉じる
@@ -124,7 +125,10 @@ function checkButtonVisibility() {
 
     const isOverFooter = window.scrollY + window.innerHeight >= footerTop;
 
-    button.style.display = isOverFooter ? 'none' : 'flex';
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 960) {
+        button.style.display = isOverFooter ? 'none' : 'flex';
+}
 }
 
 // スクロールとリサイズ時にチェック（リサイズで表示位置が変わる可能性があるため）
