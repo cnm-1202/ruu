@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.add("active");
         overlay.classList.add("active");
         body.style.overflow = "hidden";
+        button.style.display = 'none';
     });
 
     // メニューを閉じる
@@ -95,3 +96,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//スワイパー
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    speed: 3000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    }
+});
+
+
+// ボタンの要素を取得
+const button = document.querySelector('.float');
+
+// フッターの要素を取得
+const footer = document.querySelector('.footer');
+
+// フッターに達したかどうかでボタンの表示・非表示を切り替える
+function checkButtonVisibility() {
+    const footerRect = footer.getBoundingClientRect();
+    const footerTop = footerRect.top + window.scrollY;
+
+    const isOverFooter = window.scrollY + window.innerHeight >= footerTop;
+
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 960) {
+        button.style.display = isOverFooter ? 'none' : 'flex';
+}
+}
+
+// スクロールとリサイズ時にチェック（リサイズで表示位置が変わる可能性があるため）
+window.addEventListener('scroll', checkButtonVisibility);
+window.addEventListener('resize', checkButtonVisibility);
+
+// 初期チェック
+checkButtonVisibility();
