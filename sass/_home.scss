@@ -1462,11 +1462,11 @@ body.isActive {
     &__hist {
         background-color: rgb(241, 239, 234, 90%);
         text-align: center;
-        padding: 5rem;
+        padding: 4rem;
     }
 
     &__ttl {
-        font-size: 3rem;
+        font-size: 3.2rem;
         text-align: center;
         margin-bottom: 2rem;
     }
@@ -1483,10 +1483,11 @@ body.isActive {
         &__hist {
             padding-top: 6rem;
             margin: 2rem;
+            padding: 2.5rem;
         }
 
         &__ttl {
-            font-size: 3.2rem;
+            font-size: 2rem;
         }
 
         &__details {
@@ -1535,6 +1536,7 @@ body.isActive {
 
 .humanstemcellsImg {
     max-width: 103.8rem;
+    width: 60vw;
     margin: 4rem auto;
 }
 
@@ -1544,11 +1546,12 @@ body.isActive {
 
         &__ttl {
             @include wordBreak;
-            font-size: 3rem;
+            font-size: 2.4rem;
             line-height: 4rem;
         }
 
         &__about {
+            font-size: 2rem;
             margin-top: 2rem
         }
 
@@ -1559,6 +1562,7 @@ body.isActive {
 
     .humanstemcellsImg {
         margin: 2rem 2.5rem;
+        width: 80vw;
     }
 }
 
@@ -1603,19 +1607,12 @@ body.isActive {
         }
     }
 
-    .kyoukamiMenuImg {
-        margin: 0 2.5rem;
-        display: flex;
-        flex-wrap: nowrap;
-
-        img {
-            height: auto;
-            width: auto;
-            max-width: 100%;
-            flex-shrink: 0;
-        }
+    .kyoukamiMenuImgSp {
+        width: 60vw;
+        margin: 0 auto;
     }
 }
+
 
 //強髪施術方法
 
@@ -1642,7 +1639,11 @@ body.isActive {
     max-width: 107.3rem;
     margin: 0 auto;
 }
-
+@include tab {
+    .kyoukamiFlowImg {
+        overflow-x: scroll;
+    }
+}
 @include pc {
     .kyoukamiFlowImgSp {
         display: none;
@@ -1651,17 +1652,9 @@ body.isActive {
 
 @include tab {
     .kyoukamiFlowImgSp {
-        margin: 0 2.5rem;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        margin-left: 9rem;
         display: block;
-        width: 100%;
-    }
-
-    .kyoukamiFlowImgSp img {
-        width: auto;
-        height: auto;
-        display: block;
+        width: 200vw;
         max-width: none;
     }
 }
