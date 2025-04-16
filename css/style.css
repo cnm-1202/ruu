@@ -1304,10 +1304,10 @@ body.isActive {
 .humanstemcellsFv__hist {
   background-color: rgba(241, 239, 234, 0.9);
   text-align: center;
-  padding: 5rem;
+  padding: 4rem;
 }
 .humanstemcellsFv__ttl {
-  font-size: 3rem;
+  font-size: 3.2rem;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -1320,9 +1320,10 @@ body.isActive {
   .humanstemcellsFv__hist {
     padding-top: 6rem;
     margin: 2rem;
+    padding: 2.5rem;
   }
   .humanstemcellsFv__ttl {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
   .humanstemcellsFv__details {
     text-wrap: balance;
@@ -1360,6 +1361,7 @@ body.isActive {
 
 .humanstemcellsImg {
   max-width: 103.8rem;
+  width: 60vw;
   margin: 4rem auto;
 }
 
@@ -1370,10 +1372,11 @@ body.isActive {
   .humanstemcells__ttl {
     text-wrap: balance;
     word-break: auto-phrase;
-    font-size: 3rem;
+    font-size: 2.4rem;
     line-height: 4rem;
   }
   .humanstemcells__about {
+    font-size: 2rem;
     margin-top: 2rem;
   }
   .humanstemcells__details {
@@ -1382,6 +1385,7 @@ body.isActive {
   }
   .humanstemcellsImg {
     margin: 2rem 2.5rem;
+    width: 80vw;
   }
 }
 .kyoukamiMenu__ttl {
@@ -1415,16 +1419,9 @@ body.isActive {
     word-break: auto-phrase;
     margin: 2.5rem auto;
   }
-  .kyoukamiMenuImg {
-    margin: 0 2.5rem;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .kyoukamiMenuImg img {
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    flex-shrink: 0;
+  .kyoukamiMenuImgSp {
+    width: 60vw;
+    margin: 0 auto;
   }
 }
 .kyoukamiFlow__ttl {
@@ -1446,6 +1443,11 @@ body.isActive {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 960px) {
+  .kyoukamiFlowImg {
+    overflow-x: scroll;
+  }
+}
 @media screen and (min-width: 961px) {
   .kyoukamiFlowImgSp {
     display: none;
@@ -1453,16 +1455,9 @@ body.isActive {
 }
 @media screen and (max-width: 960px) {
   .kyoukamiFlowImgSp {
-    margin: 0 2.5rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    margin-left: 9rem;
     display: block;
-    width: 100%;
-  }
-  .kyoukamiFlowImgSp img {
-    width: auto;
-    height: auto;
-    display: block;
+    width: 200vw;
     max-width: none;
   }
 }

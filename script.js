@@ -97,19 +97,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //スワイパー
-
-const swiper = new Swiper('.swiper', {
-    loop: true,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    speed: 3000,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-    }
-});
+if (document.body.id === "topPage") {
+    // index.htmlだけの処理
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 3000,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        }
+    });
+}
 
 
 // ボタンの要素を取得
