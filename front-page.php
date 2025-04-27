@@ -1,150 +1,172 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruu｜箕面市桜井のプライベートヘアサロン</title>
+<?php get_header(); ?>
 
-    <!-- style.css 読み込み -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- フォント読み込み -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Fontsまとめて読み込み -->
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Darumadrop+One&family=Mohave:ital,wght@0,300..700;1,300..700&family=Nanum+Gothic&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- フォントここまで -->
-</head>
-
-<body>
-    <!-- ヘッダーここから -->
-    <header>
-        <div class="header">
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"></a><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
-
-    <!-- メニュー -->
-        <div id="overlay" class="overlay"></div>
-        <nav id="jsNav" class="jsNav">
-            <img src="./img/closeBtn.svg" id="closeBtn" alt="メニューを閉じる" class="jsNav__closeBtn">
-            <ul class="jsNav__menu">
-                <li class="jsNav__list"><a href="/#top">TOP</a></li>
-                <li class="jsNav__list"><a href="/#concept">CONCEPT</a></li>
-                <li class="jsNav__list"><a href="/#profile">PROFILE</a></li>
-                <li class="jsNav__list"><a href="/#menu">MENU</a></li>
-                <li class="jsNav__list"><a href="/#features">FEATURES</a></li>
-                <li class="jsNav__list"><a href="/#news">NEWS</a></li>
-                <li class="jsNav__list"><a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer">RESERVATION</a></li>
-            </ul>
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="jsNav__logo"></a>
-        </nav>
-        </div>
-    <!-- メニューここまで -->
-    </header>
-
-    <!-- ヘッダーここまで -->
-
-    <main>
+<main>
     <!-- FV -->
-        <div class="improvementFv">
-            <div class="improvementFv__hist fadeUp">
-                <h2 class="improvementFv__ttl">History</h2>
-                <h3 class="improvementFv__details">妻の髪がどんなトリートメントを施しても効果が出づらく<br>
-                    研究に研究を重ねた結果、<br>
-                    全ての髪質に対応できる<span class="highlight">極上のトリートメント</span>が完成致しました。<br>
-                    <br>
-                    極上の髪質改善で全て叶えます。</h3>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/FV.webp" alt="Ruuのファーストビュー1枚目">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/FV_2.webp" alt="Ruuのファーストビュー2枚目">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/FV_3.webp" alt="Ruuのファーストビュー3枚目">
+                </div>
             </div>
         </div>
 
         <figure class="fvScrollIcon">
             <div class="fvScrollIcon__scissorsWrapper">
-                <img src="./img/scissors_left.svg" alt="ハサミ" class="fvScrollIcon__scissors1">
-                <img src="./img/scissors_right.svg" alt="ハサミ" class="fvScrollIcon__scissors2">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/scissors_left.svg" alt="左のハサミアイコン" class="fvScrollIcon__scissors1">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/scissors_right.svg" alt="右のハサミアイコン" class="fvScrollIcon__scissors2">
             </div>
             <p>scroll</p>
         </figure>
-
     <!-- FVここまで -->
 
-    <!-- 髪質改善について -->
-    <div class="section">
-        <div class="improvement">
+    <!-- CONCEPT -->
+        <section class="section" id="concept">
+        <div class="concept">
 
-                <h2 class="improvement__ttl">髪質改善について</h2>
-                <div class="ttlUnderBar"></div>
-                <h3 class="improvement__details">完全トリートメント領域の成分で調合するので髪が全く傷まず、<br>
-                    全ての髪質やダメージに対応可能</h3>
+        <div class="conceptTxts">
+            <h2 class="conceptTxts__ttl">Concept</h2>
+            <h3 class="conceptTxts__message">
+                クセ毛やダメージなど<br>
+                髪質で悩む全ての女性に感動を
+            </h3>
+            <p class="conceptTxts__details">
+                髪やお肌の悩みを解決して、<br>
+                「いつまでも美しくありたい」を叶えます。
+            </p>
+        </div>
 
-            <div class="improvementContents">
-                <img src="./img/improvement_pic.webp" alt="Ruu 髪質改善画像" class="improvementContents__img">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/concept_pic.webp" alt="Ruu コンセプト画像" class="conceptImg fadeUp">
 
-                <h3 class="improvementContents__details">約10種類の商材を髪質に合わせて<br>
-                    1%単位で調合しているので完全オーダーメイド<br>
-                    <br>
-                    特殊なルートで仕入れているので、<br>
-                    東京のサロンか当サロン(Ruu)でしか出来ない技術。<br>
-                    <br>
-                    持続力は業界最高峰の2ヶ月ですが<br>
-                    積み重ねることでとてもさらさらな髪質に。<br>
-                    <br>
-                    ※髪の癖やうねりが強い場合は<br>
-                    　美髪矯正がオススメです</h3>
+        <div class="conceptSupport fadeLeft">
+            <p class="conceptSupport__details split">
+                Ruu（ルウ）は、お客様の髪の悩みに寄り添う<br>
+                完全貸切マンツーマン美容室です。<br>
+                <br>
+                大人女性の3つの悩み<br>
+                「白髪」「髪質の変化」「骨格の変化」にフォーカスし<br>
+                一人ひとりと丁寧に向き合い、髪の悩みを解決して<br>
+                あなたの「<span class="highlight">いつまでも美しくありたい</span>」をサポートします。
+            </p>
+        </div>
+        </div>
+        </section>
+    <!-- CONCEPTここまで -->
+
+    <!-- PROFILE -->
+        <section class="section" id="profile">
+        <div class="profile">
+        <h2 class="profile__ttl">Profile</h2>
+
+        <div class="profileContents fadeRight">
+            <div class="profileImg">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/profile_pic.webp" alt="代表 乾 恵一のプロフィール写真" class="pcOnly">
+            </div>
+
+            <div class="profileTxts">
+                <h3 class="profileTxts__name">
+                    <span class="highlight">Ruu 代表</span>　乾 恵一
+                </h3>
+                <p class="profileTxts__career">美容師歴15年</p>
+                <p class="profileTxts__details">
+                    “<span class="highlight">100回目でも丁寧な美容室</span>”をテーマに<br>
+                    お客様のお悩みに寄り添った技術と<br>
+                    温かい接客を心掛けてます。
+                </p>
             </div>
         </div>
-    </div>
-    <!-- 髪質改善についてここまで -->
-
-    <!-- 質感再生カラー -->
-    <div class="section">
-        <div class="improvemenColor">
-
-                <h3 class="improvementColor__ttl">髪質改善とカラーを同時にしていく質感再整カラーも大人気です。</h3>
-                <div class="ttlUnderBar"></div>
-
-            <div class="improvementColorImg">
-                <img src="./img/improvementcolor_pc_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight pcOnly">
-                <img src="./img/improvementcolor_sp_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight spOnly">
-                <img src="./img/improvementcolor_pc_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft pcOnly">
-                <img src="./img/improvementcolor_sp_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft spOnly">
-            </div>
-
-            <div class="improvementColorTxts fadeUp">
-                <p>髪質改善再整カラーは次世代のカラーリング技術で、<br>
-                    髪の質感を劇的に改善しながら理想の色合いを実現します<br>
-                    <br>
-                    このカラーリングは、髪の内部からダメージを補修し<br>
-                    潤いや柔らかさ、ツヤを取り戻します<br>
-                    <br>
-                    従来のカラーとは異なり、<span class="highlight">髪を美しく健康的に保ちながら</span><br>
-                    発色を最大限に引き出すことが可能です</p>
-            </div>
         </div>
-    </div>
-    <!-- 質感再生カラーここまで -->
+        </section>
+    <!-- PROFILEここまで -->
 
-    <!-- Ravissaについて -->
-    <div class="section">
-        <div class="ravissa">
-            <h2 class="ravissa__ttl">Ravissaについて</h2>
-            <div class="ttlUnderBar"></div>
 
-                <img src="./img/ravissa.webp" class="ravissa__img fadeUp" alt="Ravissaについて">
+    <!-- MENU -->
+        <section class="section" id="menu">
+        <div class="menu">
+        <h2 class="menu__ttl">Menu</h2>
 
-                <h3 class="ravissa__details">時を超えるスキンケアブランド <span class="highlight">ラヴィーサ</span><br>
-                    年齢と共に気になるお悩みも解決できます。<br>
-                    当店でも速攻リフトアップする導入化粧水のミストなどを体感いただけます。</h3>
-                </div>
-
-                <div class="btnArea">
-                    <a href="http://www.alen.co.jp/sp/ravissa.html" target="_blank" rel="noopener noreferrer" class="btn"><p>Website</p></a>
-                </div>
+        <div class="menuTxts">
+            <p class="menuTxts__details">
+                Ruuでは、お客様の髪質に合わせて<br>
+                オーダーメイドでメニューをご提案します。<br>
+                <br>
+                貸切マンツーマン施術なので、<br>
+                今まで言えなかった悩みや理想の髪質など、<br>
+                何でもご相談ください。
+            </p>
         </div>
-    </div>
-    <!-- Ravissaについてここまで -->
+
+        <div class="menuImg fadeUp">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/menu_pic.webp" alt="ヘアメニュー施術風景の画像">
+        </div>
+
+        <div class="btnArea">
+            <a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer" class="btn">Reservation</a>
+        </div>
+        </div>
+        </section>
+    <!-- MENUここまで -->
+
+    <!-- FEATURES -->
+        <section id="features" class="features">
+        <h2 class="features__ttl">Features</h2>
+
+        <div class="featuresContents">
+
+        <a href="/improvement">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/improvementPC.webp" class="featuresContents__improvement pcOnly">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/improvementSP.webp" class="featuresContents__improvement tabAndSp">
+        </a>
+
+        <a href="/humanstemcells">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/humanstemcellsPC.webp" class="featuresContents__humanstemcells pcOnly">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/humanstemcellsSP.webp" class="featuresContents__humanstemcells tabAndSp">
+        </a>
+
+        </div>
+        </section>
+    <!-- FEATURESここまで -->
+
+    <!-- NEWS -->
+        <section id="news" class="section">
+        <div class="news">
+        <h2 class="news__ttl">News</h2>
+
+        <!-- ここにコピペ -->
+        <?php
+        $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 3, // 表示件数
+        'orderby'        => 'modified', // 更新日でソート
+        'order'          => 'DESC',// 降順↔︎ASC 昇順
+        );
+        $latest_posts = new WP_Query( $args );
+        ?>
+        <?php if ( $latest_posts->have_posts() ) : ?>
+            <ul class="newsList">
+            <?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
+                <li class="newsList__item">
+                <p class="newsList__time"><?php the_modified_date('Y.m.d'); ?></p>
+                <p class="newsList__txt"><span><?php the_excerpt(); ?></span></p>
+                </li>
+            <?php endwhile; ?>
+            </ul>
+        <?php else : ?>
+        <p>投稿が見つかりませんでした。</p>
+        <?php endif; ?>
+        </div>
+        </section>
+
+
+    <!-- NEWSここまで -->
 
     <!-- RESERVATION -->
-    <section class="section pcOnly">
+        <section class="section pcOnly">
         <div id="reservation" class="reservation fadeUp">
 
             <a href="https://lin.ee/wPSXxHY " target="_blank" rel="noopener noreferrer"><div class="reservation__btn">
@@ -195,35 +217,24 @@
 
     <!-- フローティングバナーここまで -->
 
-    </main>
+    <!-- ACCESS -->
+        <div id="access" class="access">
 
-<!-- フッター -->
+            <div class="accessTxts">
+                <h2 class="accessTxts__ttl">Access</h2>
+                <h2 class="accessTxts__ruu">Ruu</h2>
+                <h3 class="accessTxts__address">〒562-0044 箕面市半町2-2-38グレース桜井</h3>
+                <h3 class="accessTxts__address">阪急箕面線桜井駅徒歩1分</h3>
+                <p class="accessTxts__details">最寄り：桜井駅前駐車場 22台 駐車料金全額負担<br>
+                駐輪場：バイク置き場 マンションの駐輪場13番</p>
+            </div>
 
-<footer>
-    <div class="footer">
-        <div class="footerContents__logo">
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ"></a>
-        </div>
-        <nav class="footerMenu">
-            <ul>
-                <li><a href="/#top" class="footerMenu__label">TOP</a></li>
-                <li><a href="/#concept" class="footerMenu__label">CONCEPT</a></li>
-                <li><a href="/#profile" class="footerMenu__label">PROFILE</a></li>
-                <li><a href="/#menu" class="footerMenu__label">MENU</a></li>
-                <li><a href="/#features" class="footerMenu__label">FEATURES</a></li>
-                <li><a href="/#news" class="footerMenu__label">NEWS</a></li>
-                <li><a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer"class="footerMenu__label">RESERVATION</a></li>
-            </ul>
-        </nav>
-        <p class="copyright">©2025 Ruu ALL RIGHTS RESERVED.</p>
-    </div>
-</footer>
+            <div class="accessMap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11782.360901218088!2d135.46105001334223!3d34.81750704168691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000fbf60e33bbf1%3A0xfd5ab2a00ab11c4!2zUnV144CQ44Or44Km44CR6auq6LOq5pS55ZaE54m55YyWL-ODl-ODqeOCpOODmeODvOODiOOCteODreODsw!5e0!3m2!1sja!2sjp!4v1743497809450!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
-<!-- フッターここまで -->
+            </div>
 
-<!-- JS読み込み -->
+    <!-- ACCESSここまで -->
 
-<script src="script.js" defer></script>
+</main>
 
-</body>
-</html>
+<?php get_footer(); ?>

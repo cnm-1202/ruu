@@ -1,147 +1,122 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruu｜箕面市桜井のプライベートヘアサロン</title>
+<?php get_header(); ?>
 
-    <!-- style.css 読み込み -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- フォント読み込み -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Fontsまとめて読み込み -->
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Darumadrop+One&family=Mohave:ital,wght@0,300..700;1,300..700&family=Nanum+Gothic&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- フォントここまで -->
-</head>
-
-<body>
-    <!-- ヘッダーここから -->
-    <header>
-        <div class="header">
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"></a><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
-
-    <!-- メニュー -->
-        <div id="overlay" class="overlay"></div>
-        <nav id="jsNav" class="jsNav">
-            <img src="./img/closeBtn.svg" id="closeBtn" alt="メニューを閉じる" class="jsNav__closeBtn">
-            <ul class="jsNav__menu">
-                <li class="jsNav__list"><a href="/#top">TOP</a></li>
-                <li class="jsNav__list"><a href="/#concept">CONCEPT</a></li>
-                <li class="jsNav__list"><a href="/#profile">PROFILE</a></li>
-                <li class="jsNav__list"><a href="/#menu">MENU</a></li>
-                <li class="jsNav__list"><a href="/#features">FEATURES</a></li>
-                <li class="jsNav__list"><a href="/#news">NEWS</a></li>
-                <li class="jsNav__list"><a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer">RESERVATION</a></li>
-            </ul>
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="jsNav__logo"></a>
-        </nav>
-        </div>
-    <!-- メニューここまで -->
-    </header>
-
-    <!-- ヘッダーここまで -->
-
-    <main>
+<main>
     <!-- FV -->
-        <div class="improvementFv">
-            <div class="improvementFv__hist fadeUp">
-                <h2 class="improvementFv__ttl">History</h2>
-                <h3 class="improvementFv__details">妻の髪がどんなトリートメントを施しても効果が出づらく<br>
-                    研究に研究を重ねた結果、<br>
-                    全ての髪質に対応できる<span class="highlight">極上のトリートメント</span>が完成致しました。<br>
+        <div class="humanstemcellsFv">
+
+            <div class="humanstemcellsFv__hist fadeUp">
+                <h2 class="humanstemcellsFv__ttl">ヒト幹細胞培養液<br>
+                    頭皮の育毛促進プログラム</h2>
+                <div class="ttlUnderBar"></div>
+                <h3 class="humanstemcellsFv__details">再生医療の分野から生まれた「ヒト幹細胞上清液」を使用<br>
+                    毛根の活性化や頭皮のターンオーバーの正常化を促進<br>
                     <br>
-                    極上の髪質改善で全て叶えます。</h3>
+                    <span class="highlight">次世代の頭皮ケア</span>です。</h3>
             </div>
         </div>
 
         <figure class="fvScrollIcon">
             <div class="fvScrollIcon__scissorsWrapper">
-                <img src="./img/scissors_left.svg" alt="ハサミ" class="fvScrollIcon__scissors1">
-                <img src="./img/scissors_right.svg" alt="ハサミ" class="fvScrollIcon__scissors2">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/scissors_left.svg" alt class="fvScrollIcon__scissors1">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/scissors_right.svg" alt class="fvScrollIcon__scissors2">
             </div>
             <p>scroll</p>
         </figure>
-
     <!-- FVここまで -->
 
-    <!-- 髪質改善について -->
+    <!-- ヒト幹細胞培養液 頭皮の育毛促進プログラム -->
     <div class="section">
-        <div class="improvement">
-
-                <h2 class="improvement__ttl">髪質改善について</h2>
-                <div class="ttlUnderBar"></div>
-                <h3 class="improvement__details">完全トリートメント領域の成分で調合するので髪が全く傷まず、<br>
-                    全ての髪質やダメージに対応可能</h3>
-
-            <div class="improvementContents">
-                <img src="./img/improvement_pic.webp" alt="Ruu 髪質改善画像" class="improvementContents__img">
-
-                <h3 class="improvementContents__details">約10種類の商材を髪質に合わせて<br>
-                    1%単位で調合しているので完全オーダーメイド<br>
-                    <br>
-                    特殊なルートで仕入れているので、<br>
-                    東京のサロンか当サロン(Ruu)でしか出来ない技術。<br>
-                    <br>
-                    持続力は業界最高峰の2ヶ月ですが<br>
-                    積み重ねることでとてもさらさらな髪質に。<br>
-                    <br>
-                    ※髪の癖やうねりが強い場合は<br>
-                    　美髪矯正がオススメです</h3>
-            </div>
-        </div>
-    </div>
-    <!-- 髪質改善についてここまで -->
-
-    <!-- 質感再生カラー -->
-    <div class="section">
-        <div class="improvemenColor">
-
-                <h3 class="improvementColor__ttl">髪質改善とカラーを同時にしていく質感再整カラーも大人気です。</h3>
-                <div class="ttlUnderBar"></div>
-
-            <div class="improvementColorImg">
-                <img src="./img/improvementcolor_pc_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight pcOnly">
-                <img src="./img/improvementcolor_sp_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight spOnly">
-                <img src="./img/improvementcolor_pc_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft pcOnly">
-                <img src="./img/improvementcolor_sp_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft spOnly">
-            </div>
-
-            <div class="improvementColorTxts fadeUp">
-                <p>髪質改善再整カラーは次世代のカラーリング技術で、<br>
-                    髪の質感を劇的に改善しながら理想の色合いを実現します<br>
-                    <br>
-                    このカラーリングは、髪の内部からダメージを補修し<br>
-                    潤いや柔らかさ、ツヤを取り戻します<br>
-                    <br>
-                    従来のカラーとは異なり、<span class="highlight">髪を美しく健康的に保ちながら</span><br>
-                    発色を最大限に引き出すことが可能です</p>
-            </div>
-        </div>
-    </div>
-    <!-- 質感再生カラーここまで -->
-
-    <!-- Ravissaについて -->
-    <div class="section">
-        <div class="ravissa">
-            <h2 class="ravissa__ttl">Ravissaについて</h2>
+        <div class="humanstemcells">
+            <h2 class="humanstemcells__ttl">ヒト幹細胞培養液<br>頭皮の育毛促進プログラム</h2>
             <div class="ttlUnderBar"></div>
 
-                <img src="./img/ravissa.webp" class="ravissa__img fadeUp" alt="Ravissaについて">
+            <h3 class="humanstemcells__about">強髪とは？</h3>
+            <p class="humanstemcells__details">ヒト幹細胞上清液を使い、毛根を活性化し<br>
+            頭皮のターンオーバーの正常化を促進するプログラムのことです。</p>
 
-                <h3 class="ravissa__details">時を超えるスキンケアブランド <span class="highlight">ラヴィーサ</span><br>
-                    年齢と共に気になるお悩みも解決できます。<br>
-                    当店でも速攻リフトアップする導入化粧水のミストなどを体感いただけます。</h3>
-                </div>
+            <h3 class="humanstemcells__about">どんな感じで効果がある？</h3>
+            <p class="humanstemcells__details">ヒト幹細胞培養液を与えることで、眠っている細胞を活発化させ<br>
+            生き生きとした髪の毛をつくっていきます。</p>
 
-                <div class="btnArea">
-                    <a href="http://www.alen.co.jp/sp/ravissa.html" target="_blank" rel="noopener noreferrer" class="btn"><p>Website</p></a>
-                </div>
+        </div>
+
+        <div class="humanstemcellsImg">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/whatIsKyoukami.webp" alt="Ruu 強髪とは？" class="fadeUp">
+        </div>
+
+    </div>
+    <!-- ヒト幹細胞培養液 頭皮の育毛促進プログラム ここまで -->
+
+    <!-- 強髪メニュー -->
+    <div class="section">
+        <div class="kyoukamiMenu">
+            <h3 class="kyoukamiMenu__ttl">強髪メニュー例</h3>
+            <div class="ttlUnderBar"></div>
+
+            <p class="kyoukamiMenu__details">強髪の施術は毛周期に合わせて、<br>
+                2週間に1回もしくは1ヶ月に1回の使用がおすすめ。</p>
+
+        </div>
+
+        <div class="kyoukamiMenuImg">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kyoukamiMenu.webp" alt="Ruu 強髪メニュー" class="pcOnly fadeRight">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kyoukamiMenuSP.webp" alt="Ruu 強髪メニュー" class="kyoukamiMenuImgSp tabAndSp fadeRight">
         </div>
     </div>
-    <!-- Ravissaについてここまで -->
+    <!-- 強髪メニュー ここまで -->
+
+    <!-- 強髪施術方法 -->
+    <div class="section">
+        <h3 class="kyoukamiFlow__ttl">施術方法</h3>
+        <div class="ttlUnderBar"></div>
+
+        <div class="kyoukamiFlowImg">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kyoukamiFlow.webp" alt="Ruu 強髪施術方法" class="pcOnly fadeLeft">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kyoukamiFlowSP.webp" alt="Ruu 強髪施術方法" class="kyoukamiFlowImgSp tabAndSp fadeLeft">
+        </div>
+    </div>
+    <!-- 強髪施術方法 ここまで -->
+
+    <!-- 強髪Q&A -->
+    <div class="section">
+        <div class="kyoukamiQanda">
+            <h3 class="kyoukamiQanda__ttl">Q & A</h3>
+            <div class="ttlUnderBar"></div>
+
+        </div>
+
+        <div class="kyoukamiQandaList">
+                <dl class="fadeUp">
+                    <dt>産後の抜け毛にも効果的ですか？</dt>
+                    <div class="qandLine"></div>
+                    <dd>大変おすすめです。髪質の変化から時間が経ってしまうと、<br>
+                        改善にも影響が出てしまうので、産後10ヶ月以内がおすすめです。</dd>
+                </dl>
+
+                <dl class="fadeUp">
+                    <dt>元々髪の毛が細いのですが、太くなりますか？</dt>
+                    <div class="qandLine"></div>
+                    <dd>生まれつき細い髪の毛を太くするのは難しいですが、年齢を重ねて細くなることは誰しもが<br>
+                    感じる事です。以前より髪が細くなったと感じたらぜひ強髪を！</dd>
+                </dl>
+
+                <dl class="fadeUp">
+                    <dt>半年間のプログラム修了後はどうすればよいでしょうか？</dt>
+                    <div class="qandLine"></div>
+                    <dd>筋トレと同じで、一度体を作ってもやめてしまうと体は元に戻ります。<br>
+                    頻度を下げた定期ケアに切り替えることをおすすめします。</dd>
+                </dl>
+
+                <dl class="fadeUp">
+                    <dt>月に1回のサロン施術でも効果はありますか？</dt>
+                    <div class="qandLine"></div>
+                    <dd>あります。<br>
+                        さらに強髪専用のシャンプーを使用し、毎日のケアをすることで更なる効果が見込めます。</dd>
+                </dl>
+
+        </div>
+    </div>
+    <!-- 強髪Q&A ここまで -->
 
     <!-- RESERVATION -->
     <section class="section pcOnly">
@@ -173,7 +148,7 @@
 
     <div id="float" class="float">
 
-        <a href="https://lin.ee/wPSXxHY " target="_blank" rel="noopener noreferrer" class="float__btn">
+        <a href="https://lin.ee/wPSXxHY " target="_blank" rel="noopener noreferrer"  class="float__btn">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 0.00242147C13.4325 0.00242147 0 12.2649 0 27.3945C0 35.0876 3.48396 42.018 9.07516 46.9942C7.8553 54.2805 -0.0257551 57.2468 0.51276 59.2518C7.56029 62.2666 21.5172 55.2684 23.6338 54.1836C25.6802 54.5856 27.8225 54.789 30 54.789C46.5675 54.789 60 42.5241 60 27.3945C60 12.2649 46.5652 0.00242147 30 0.00242147Z" fill="#C5B589" class="float__logo">
             </svg><p class="float__label">Official LINE</p></a>
@@ -197,33 +172,4 @@
 
     </main>
 
-<!-- フッター -->
-
-<footer>
-    <div class="footer">
-        <div class="footerContents__logo">
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ"></a>
-        </div>
-        <nav class="footerMenu">
-            <ul>
-                <li><a href="/#top" class="footerMenu__label">TOP</a></li>
-                <li><a href="/#concept" class="footerMenu__label">CONCEPT</a></li>
-                <li><a href="/#profile" class="footerMenu__label">PROFILE</a></li>
-                <li><a href="/#menu" class="footerMenu__label">MENU</a></li>
-                <li><a href="/#features" class="footerMenu__label">FEATURES</a></li>
-                <li><a href="/#news" class="footerMenu__label">NEWS</a></li>
-                <li><a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer"class="footerMenu__label">RESERVATION</a></li>
-            </ul>
-        </nav>
-        <p class="copyright">©2025 Ruu ALL RIGHTS RESERVED.</p>
-    </div>
-</footer>
-
-<!-- フッターここまで -->
-
-<!-- JS読み込み -->
-
-<script src="script.js" defer></script>
-
-</body>
-</html>
+<?php get_footer(); ?>

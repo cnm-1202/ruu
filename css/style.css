@@ -85,6 +85,7 @@ img {
 }
 
 html {
+  margin-top: 0;
   font-size: 62.5%;
 }
 
@@ -424,8 +425,6 @@ body.isActive {
   font-weight: "bold";
   letter-spacing: 0.1rem;
   font-style: normal;
-  text-wrap: balance;
-  word-break: auto-phrase;
   font-size: 4rem;
   text-align: left;
   padding: 0 0.1rem 0.2rem;
@@ -445,8 +444,6 @@ body.isActive {
 }
 
 .conceptSupport {
-  text-wrap: balance;
-  word-break: auto-phrase;
   text-align: center;
   padding: 6rem 7rem;
   margin: 3vw auto;
@@ -454,6 +451,8 @@ body.isActive {
   background-color: #fdfdfd;
   position: relative;
   z-index: 1;
+  text-wrap: balance;
+  word-break: auto-phrase;
 }
 
 .conceptTxts::after {
@@ -526,6 +525,10 @@ body.isActive {
   .concept .conceptSupport {
     margin-top: 2rem;
     padding: 7rem 2.5rem;
+  }
+  .concept .conceptSupport__details {
+    text-wrap: balance;
+    word-break: auto-phrase;
   }
 }
 .profile__ttl {
@@ -815,19 +818,19 @@ body.isActive {
   display: flex;
   align-items: center;
   padding: 1rem 0 1rem;
-  gap: 10rem;
+  gap: 5rem;
   border-bottom: 0.1rem #767676 solid;
 }
-.newsList__item time {
+.newsList__txt {
+  margin: 0;
+}
+.newsList__time {
   font-family: "Averia Serif Libre", serif;
   font-weight: "bold";
   letter-spacing: 0.1rem;
   font-style: normal;
   font-weight: bold;
   white-space: nowrap;
-}
-.newsList__txt {
-  margin: 0;
 }
 
 @media screen and (max-width: 960px) {
@@ -918,8 +921,10 @@ body.isActive {
   height: 100%;
   transition: background-color 0.3s, color 0.3s;
   box-sizing: border-box;
-  max-width: 100%; /* 最大幅を100%に設定 */
-  overflow: hidden; /* 要素がはみ出さないようにする */
+  max-width: 100%;
+  /* 最大幅を100%に設定 */
+  overflow: hidden;
+  /* 要素がはみ出さないようにする */
 }
 .float__btn:first-child {
   border-left: solid 0.1rem #333631;
@@ -1119,7 +1124,7 @@ body.isActive {
   }
 }
 .improvementFv {
-  background-image: url("/img/improvementFv.webp");
+  background-image: url("../img/improvementFv.webp");
   background-size: cover;
   background-repeat: no-repeat;
   height: 65rem;
@@ -1159,10 +1164,14 @@ body.isActive {
     font-size: 3.2rem;
   }
   .improvementFv__details {
-    text-wrap: balance;
-    word-break: auto-phrase;
     font-size: 1.4rem;
     line-height: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .improvementFv__details {
+    text-wrap: balance;
+    word-break: auto-phrase;
   }
 }
 .ttlUnderBar {
@@ -1180,6 +1189,7 @@ body.isActive {
 }
 .improvement__details {
   text-align: center;
+  word-break: break-word;
   margin-top: 3rem;
   margin-bottom: 5rem;
 }
@@ -1191,7 +1201,6 @@ body.isActive {
 }
 .improvementContents__details {
   padding-left: 7.4rem;
-  font-weight: 400;
   color: #333631;
   width: 60%;
 }
@@ -1214,7 +1223,7 @@ body.isActive {
   }
   .improvement__details {
     font-size: 1.4rem;
-    margin: 4rem 6rem;
+    margin: 3rem 6rem;
   }
   .improvementContents__details {
     padding-top: 0;
@@ -1229,7 +1238,7 @@ body.isActive {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
   .improvementColor__ttl {
     text-wrap: balance;
     word-break: auto-phrase;
@@ -1258,10 +1267,15 @@ body.isActive {
 
 @media screen and (max-width: 960px) {
   .improvementColorTxts {
-    text-wrap: balance;
-    word-break: auto-phrase;
     width: 100%;
     padding: 4.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .improvementColorTxts {
+    text-wrap: balance;
+    word-break: auto-phrase;
+    font-size: 1.4rem;
   }
 }
 .ravissa__ttl {
@@ -1285,13 +1299,16 @@ body.isActive {
   .ravissa__img {
     width: 100%;
   }
+}
+@media screen and (max-width: 600px) {
   .ravissa__details {
     text-wrap: balance;
     word-break: auto-phrase;
+    font-size: 1.4rem;
   }
 }
 .humanstemcellsFv {
-  background-image: url("/img/humanstemcellsFv.webp");
+  background-image: url("../img/humanstemcellsFv.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -1326,8 +1343,6 @@ body.isActive {
     font-size: 2rem;
   }
   .humanstemcellsFv__details {
-    text-wrap: balance;
-    word-break: auto-phrase;
     font-size: 1.6rem;
     line-height: 3rem;
   }
@@ -1370,18 +1385,12 @@ body.isActive {
     margin: 0 2.5rem;
   }
   .humanstemcells__ttl {
-    text-wrap: balance;
-    word-break: auto-phrase;
     font-size: 2.4rem;
     line-height: 4rem;
   }
   .humanstemcells__about {
     font-size: 2rem;
     margin-top: 2rem;
-  }
-  .humanstemcells__details {
-    text-wrap: balance;
-    word-break: auto-phrase;
   }
   .humanstemcellsImg {
     margin: 2rem 2.5rem;
@@ -1415,13 +1424,18 @@ body.isActive {
     margin-top: 2rem;
   }
   .kyoukamiMenu__details {
-    text-wrap: balance;
-    word-break: auto-phrase;
     margin: 2.5rem auto;
   }
   .kyoukamiMenuImgSp {
     width: 60vw;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 960px) {
+  .kyoukamiMenu__details {
+    text-wrap: balance;
+    word-break: auto-phrase;
+    margin: 2.5rem auto;
   }
 }
 .kyoukamiFlow__ttl {
@@ -1537,9 +1551,13 @@ body.isActive {
     margin-right: 2.5rem;
   }
 }
-.fadeUp,
-.fadeLeft,
-.fadeRight {
+@media screen and (max-width: 600px) {
+  .kyoukamiQandaList {
+    text-wrap: balance;
+    word-break: auto-phrase;
+  }
+}
+.fadeUp, .fadeLeft, .fadeRight {
   opacity: 0;
   transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
 }

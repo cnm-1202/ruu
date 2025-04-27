@@ -1,50 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruu｜箕面市桜井のプライベートヘアサロン</title>
+<?php get_header(); ?>
 
-    <!-- style.css 読み込み -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- フォント読み込み -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Fontsまとめて読み込み -->
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Darumadrop+One&family=Mohave:ital,wght@0,300..700;1,300..700&family=Nanum+Gothic&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- フォントここまで -->
-</head>
-
-<body>
-    <!-- ヘッダーここから -->
-    <header>
-        <div class="header">
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="header__logoImg"></a><img src="./img/menu.svg" id="menuBtn" alt="メニュー" class="header__menuImg">
-
-    <!-- メニュー -->
-        <div id="overlay" class="overlay"></div>
-        <nav id="jsNav" class="jsNav">
-            <img src="./img/closeBtn.svg" id="closeBtn" alt="メニューを閉じる" class="jsNav__closeBtn">
-            <ul class="jsNav__menu">
-                <li class="jsNav__list"><a href="/#top">TOP</a></li>
-                <li class="jsNav__list"><a href="/#concept">CONCEPT</a></li>
-                <li class="jsNav__list"><a href="/#profile">PROFILE</a></li>
-                <li class="jsNav__list"><a href="/#menu">MENU</a></li>
-                <li class="jsNav__list"><a href="/#features">FEATURES</a></li>
-                <li class="jsNav__list"><a href="/#news">NEWS</a></li>
-                <li class="jsNav__list"><a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer">RESERVATION</a></li>
-            </ul>
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ" class="jsNav__logo"></a>
-        </nav>
-        </div>
-    <!-- メニューここまで -->
-    </header>
-
-    <!-- ヘッダーここまで -->
-
-    <main>
+<main>
     <!-- FV -->
         <div class="improvementFv">
             <div class="improvementFv__hist fadeUp">
@@ -59,8 +15,8 @@
 
         <figure class="fvScrollIcon">
             <div class="fvScrollIcon__scissorsWrapper">
-                <img src="./img/scissors_left.svg" alt="ハサミ" class="fvScrollIcon__scissors1">
-                <img src="./img/scissors_right.svg" alt="ハサミ" class="fvScrollIcon__scissors2">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/scissors_left.svg" alt="ハサミ" class="fvScrollIcon__scissors1">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/scissors_right.svg" alt="ハサミ" class="fvScrollIcon__scissors2">
             </div>
             <p>scroll</p>
         </figure>
@@ -76,8 +32,8 @@
                 <h3 class="improvement__details">完全トリートメント領域の成分で調合するので髪が全く傷まず、<br>
                     全ての髪質やダメージに対応可能</h3>
 
-            <div class="improvementContents">
-                <img src="./img/improvement_pic.webp" alt="Ruu 髪質改善画像" class="improvementContents__img">
+            <div class="improvementContents fadeUp">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/improvement_pic.webp" alt="Ruu 髪質改善画像" class="improvementContents__img">
 
                 <h3 class="improvementContents__details">約10種類の商材を髪質に合わせて<br>
                     1%単位で調合しているので完全オーダーメイド<br>
@@ -99,22 +55,22 @@
     <div class="section">
         <div class="improvemenColor">
 
-                <h3 class="improvementColor__ttl">髪質改善とカラーを同時にしていく質感再整カラーも大人気です。</h3>
+                <h3 class="improvementColor__ttl">髪質改善とカラーを同時にしていく<br>質感再整カラーも大人気です。</h3>
                 <div class="ttlUnderBar"></div>
 
             <div class="improvementColorImg">
-                <img src="./img/improvementcolor_pc_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight pcOnly">
-                <img src="./img/improvementcolor_sp_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight spOnly">
-                <img src="./img/improvementcolor_pc_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft pcOnly">
-                <img src="./img/improvementcolor_sp_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft spOnly">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/improvementcolor_pc_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight pcOnly">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/improvementcolor_sp_pic1.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__01 fadeRight spOnly">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/improvementcolor_pc_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft pcOnly">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/improvementcolor_sp_pic2.webp" alt="Ruu 質感再生カラー" class="improvementColorImg__02 fadeLeft spOnly">
             </div>
 
             <div class="improvementColorTxts fadeUp">
-                <p>髪質改善再整カラーは次世代のカラーリング技術で、<br>
-                    髪の質感を劇的に改善しながら理想の色合いを実現します<br>
+                <p>髪質改善再整カラーは次世代のカラーリング技術で、
+                    髪の質感を劇的に改善しながら理想の色合いを実現します
                     <br>
-                    このカラーリングは、髪の内部からダメージを補修し<br>
-                    潤いや柔らかさ、ツヤを取り戻します<br>
+                    このカラーリングは、髪の内部からダメージを補修し
+                    潤いや柔らかさ、ツヤを取り戻します
                     <br>
                     従来のカラーとは異なり、<span class="highlight">髪を美しく健康的に保ちながら</span><br>
                     発色を最大限に引き出すことが可能です</p>
@@ -129,7 +85,7 @@
             <h2 class="ravissa__ttl">Ravissaについて</h2>
             <div class="ttlUnderBar"></div>
 
-                <img src="./img/ravissa.webp" class="ravissa__img fadeUp" alt="Ravissaについて">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/ravissa.webp" class="ravissa__img fadeUp" alt="Ravissaについて">
 
                 <h3 class="ravissa__details">時を超えるスキンケアブランド <span class="highlight">ラヴィーサ</span><br>
                     年齢と共に気になるお悩みも解決できます。<br>
@@ -197,33 +153,4 @@
 
     </main>
 
-<!-- フッター -->
-
-<footer>
-    <div class="footer">
-        <div class="footerContents__logo">
-            <a href="/index.html"><img src="./img/logo.svg" alt="Ruu ロゴ"></a>
-        </div>
-        <nav class="footerMenu">
-            <ul>
-                <li><a href="/#top" class="footerMenu__label">TOP</a></li>
-                <li><a href="/#concept" class="footerMenu__label">CONCEPT</a></li>
-                <li><a href="/#profile" class="footerMenu__label">PROFILE</a></li>
-                <li><a href="/#menu" class="footerMenu__label">MENU</a></li>
-                <li><a href="/#features" class="footerMenu__label">FEATURES</a></li>
-                <li><a href="/#news" class="footerMenu__label">NEWS</a></li>
-                <li><a href="https://beauty.hotpepper.jp/slnH000705260/" target="_blank" rel="noopener noreferrer"class="footerMenu__label">RESERVATION</a></li>
-            </ul>
-        </nav>
-        <p class="copyright">©2025 Ruu ALL RIGHTS RESERVED.</p>
-    </div>
-</footer>
-
-<!-- フッターここまで -->
-
-<!-- JS読み込み -->
-
-<script src="script.js" defer></script>
-
-</body>
-</html>
+<?php get_footer(); ?>
